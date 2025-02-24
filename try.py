@@ -1,21 +1,30 @@
-# s = 'rohit shrama'
-# d = {}
-# for i in s:
-#     if i in " ":
-#         continue
-#     d[i] = d.get(i,0)+1
-# for k , v in d.items():
-#     print(f'{k} - {v}')
+# n = int(input("enter number of rows :  ")) 
+# for i in range(n+1):
+#     print("  "*(n-i) + " *  "*i)
+
+# o/p : - 
+
+#                  *
+#                *   *
+#              *   *   *
+#            *   *   *   *
+#          *   *   *   *   *
+#        *   *   *   *   *   *
+#      *   *   *   *   *   *   *
+#    *   *   *   *   *   *   *   *
+#  *   *   *   *   *   *   *   *   *
 
 
-s = 'rohit shrama'
-d = {}
-for i in s:
-    if i in ' ':
-        continue 
-    elif i in d:
-        d[i] = d[i]+1
-    else:   
-        d[i] = 1
-for k , v in d.items():
-    print(f'{k} - {v}')
+# n = int(input("enter number of rows :  ")) 
+# for i in range(n-2,-1,-1):
+#     print("  "*(n-i) + " *  "*i) 
+
+
+# enter number of rows :  9
+#     *   *   *   *   *   *   *
+#     *   *   *   *   *   *
+#         *   *   *   *   *
+#         *   *   *   *
+#             *   *   *
+#             *   *
+#                 *
