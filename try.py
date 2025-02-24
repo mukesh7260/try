@@ -1,6 +1,8 @@
-l = [23,45,87,42,98,43] 
-max_ele = l[0 ]
-for  i in l:
-    if i > max_ele:
-        max_ele = i
-print(max_ele)  
+s = 'rohit shrama'
+d = {}
+for i in s:
+    if i in " ":
+        continue
+    d[i] = d.get(i,0)+1
+for k , v in d.items():
+    print(f'{k} - {v}')
