@@ -47,3 +47,14 @@ for i in range(1,1000):
                 break 
         else:
             print(i, end=' ')
+
+
+#  program for reverse number 
+
+n = int(input("enter any number : "))
+sum = 0 
+while n > 0:
+        r = n % 10 
+        sum = sum * 10 + r 
+        n = n // 10 
+print(sum)
