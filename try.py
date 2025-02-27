@@ -113,3 +113,24 @@
 #     if l[i] > d:
 #         d = l[i] 
 # print(d) 
+
+
+# def factorial(n):
+#     if n == 0 or n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+# n = int(input("Enter a number: ")) 
+# print("The factorial of", n, "is", factorial(n)) 
+
+
+
+# n = int(input("enter any number !  ")) 
+# for i in range(1,11):
+#     a = n * i 
+#     print(n,"*",i,"=",a)
+
+
+
+# a = lambda a, b : a + b 
+# print(a(2,3))
