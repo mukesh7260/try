@@ -80,3 +80,43 @@ print(sum)
 #         print("buzz")
 #     else:
 #         print("fuzz")
+
+
+
+# DIAMOND SHAPE 
+
+
+# n = int(input("enter no. of rows !!  ")) 
+# for i in range(n+1):
+#     print('  '*(n-i) + ' *  '*i) 
+# for i in range(n-1, -1,-1):
+#     print('  '*(n-i) + ' *  '*i)
+
+
+
+# triangle shape rotation 
+
+# n = int(input("enter no. of rows !!  ")) 
+# for i in range(n+1):
+#     print('  '*(n-i) + '* '*i) 
+# for i in range(n-1, -1,-1):
+#     print('  '*(n-i) + '* '*i)
+
+
+# n = int(input("enter no. of rows !!  ")) 
+# for i in range(n+1):
+#     print('* '*i) 
+# for i in range(n-1, -1,-1):
+#     print('* '*i)
+
+
+
+# find maximum number in the list 
+
+
+# l = [23,65,45,98,75,35] 
+# d =l[-3]
+# for i in range(len(l)):
+#     if l[i] > d:
+#         d = l[i] 
+# print(d) 
