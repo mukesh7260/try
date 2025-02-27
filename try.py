@@ -46,10 +46,31 @@
 
 #  program for reverse number 
 
-n = int(input("enter any number : "))
-sum = 0 
-while n > 0:
-        r = n % 10 
-        sum = sum * 10 + r 
-        n = n // 10 
-print(sum)
+# n = int(input("enter any number : "))
+# sum = 0 
+# while n > 0:
+#         r = n % 10 
+#         sum = sum * 10 + r 
+#         n = n // 10 
+# print(sum)
+
+
+# n = int(input("enter any number !   ")) 
+# for i in range(n+1):
+#         if i % 2 == 0:
+#                 print("buzz") 
+#         elif i % 2 == 1:
+#                 print("fuzz")
+#         else:
+#                 print('buzz fuzz')
+
+
+
+# n = int(input("Enter any number! "))
+# for i in range(n + 1):
+#     if i % 4 == 0:
+#         print("buzz fuzz")  # Special case for multiples of 4
+#     elif i % 2 == 0:
+#         print("buzz")
+#     else:
+#         print("fuzz")                
