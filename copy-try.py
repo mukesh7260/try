@@ -142,3 +142,9 @@ print("The factorial of", n, "is", factorial(n))
 
 # a = lambda a, b : a + b 
 # print(a(2,3))
+
+
+import datetime 
+from datetime import timedelta , date
+t = date.today() + timedelta(days=10)
+print(t) 
