@@ -148,19 +148,31 @@
 # print(f'{a:06d}')
 
 
-def kumar(mukesh):
-    def abc():
-        d = mukesh()
-        e = d * 10000
-        return e
-    return abc
-@kumar
+# def kumar(mukesh):
+#     def abc():
+#         d = mukesh()
+#         e = d * 10000
+#         return e
+#     return abc
+# @kumar
         
-def mukesh():
-    a = 10 
-    b = 20
-    c = a + b 
-#     print(c)
-    return c 
-m = mukesh()
-print(m) 
+# def mukesh():
+#     a = 10 
+#     b = 20
+#     c = a + b 
+# #     print(c)
+#     return c 
+# m = mukesh()
+# print(m) 
+
+
+
+
+
+s = 'rohit shrama'
+v = ['a','e','i','o','u']
+for i in s:
+    if i in v:
+        print('vowel',i)
+    else:
+        print('consonant',i)
