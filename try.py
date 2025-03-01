@@ -137,7 +137,30 @@
 
 
 
-import datetime 
-from datetime import timedelta , date
-t = date.today() + timedelta(days=10)
-print(t) 
+# import datetime 
+# from datetime import timedelta , date
+# t = date.today() + timedelta(days=10)
+# print(t) 
+
+
+# import random 
+# a = random.randint(000000,999999)
+# print(f'{a:06d}')
+
+
+def kumar(mukesh):
+    def abc():
+        d = mukesh()
+        e = d * 10000
+        return e
+    return abc
+@kumar
+        
+def mukesh():
+    a = 10 
+    b = 20
+    c = a + b 
+#     print(c)
+    return c 
+m = mukesh()
+print(m) 
