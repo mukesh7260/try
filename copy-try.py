@@ -172,13 +172,13 @@ print(t)
 
 
 
-s = 'rohit shrama'
-v = ['a','e','i','o','u']
-for i in s:
-    if i in v:
-        print('vowel',i)
-    else:
-        print('consonant',i)
+# s = 'rohit shrama'
+# v = ['a','e','i','o','u']
+# for i in s:
+#     if i in v:
+#         print('vowel',i)
+#     else:
+#         print('consonant',i)
 
 
 
@@ -192,12 +192,12 @@ for i in s:
 #         print('consonant',i)
 
 
-s = 'rohit shrama'
-v = ['a','e','i','o','u']
-for i in s:
-    if i in v:
-        print('vowel',i) 
-for i in s:
-    if i not in v and i != ' ':
-        print('consonant',i)
+# s = 'rohit shrama'
+# v = ['a','e','i','o','u']
+# for i in s:
+#     if i in v:
+#         print('vowel',i) 
+# for i in s:
+#     if i not in v and i != ' ':
+#         print('consonant',i)
  
