@@ -266,3 +266,82 @@ function display(name1, name2)
 				}
 			}
 display("GeekyShows", "World");
+
+
+
+// function example 10
+
+function display()
+			{
+				arguments[0] = "Hello";
+				for(var i = 0; i<arguments.length; i++)
+				{
+					console.log(arguments[i] + " ");
+				}
+			}
+display("GeekyShows", "World");
+
+
+
+// function example 11
+
+// Rest Parameters
+function show(...args){
+    console.log(args);
+}
+show(10,20,30,40,50,89,56,43);
+
+
+// function example 12
+
+
+// Rest Parameters one
+function show(a, ...args){
+    console.log(a);
+    console.log(args);
+}
+show(10,20,30,40,50);
+
+
+// function example 13
+
+
+// Rest Parameters 2
+function show(a, ...args){
+    console.log(a);
+    console.log(args[0] + " " + args[1] + " " + args[2]);
+}
+show(10,20,30,40,50);
+
+
+// function example 14
+
+// Rest Parameters vs arguments parameter
+function restShow(...args){
+    console.log(args);
+}
+restShow(10,20,30,40,50);
+
+// Arguments Object
+function show(){
+    console.log(arguments);
+}
+show(10,20,30,40,50);
+
+
+// function example 15
+
+// Rest Parameters
+function restShow(a, ...args){
+    console.log("a: " + a);
+    console.log(args);
+}
+restShow(10,20,30,40,50);
+
+// Arguments Object
+function show(a){
+    console.log("a: " + a);
+    console.log(arguments);
+}
+show(10,20,30,40,50);
+
