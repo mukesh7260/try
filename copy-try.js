@@ -345,3 +345,85 @@ function show(a){
 }
 show(10,20,30,40,50);
 
+
+
+// function example 16
+
+function add(a, b){
+    return (a+b);
+}
+console.log(add(10, 20));
+
+
+// function example 17 block scope
+
+
+
+if(true){
+    var i = 10;	// accesssible from anywhere
+    console.log(i );
+}
+// in other programming i is not accessible outside block
+// but in javascript it is accessible
+console.log(i);	// i accessible outside block
+
+if(true){
+    let j = 10;	// only accessible within block
+    console.log(j);
+}
+// when we declare variable with let
+// it is only accessible within block
+console.log(j );	// j not accessible 
+
+
+// function example 18   , Global Variable 
+
+
+// accessible from anywhere 
+var i = "I am global Variable";	// Global Variable
+			
+function show(){
+    console.log(i);	// accessible in function
+}
+show();
+
+console.log(i);	// accessible outside
+
+function disp(){
+    console.log(i);	// accessible in function
+}
+disp();
+
+if(true){
+    console.log(i);	// accessible in block
+
+}
+
+
+// function example 19, Local Variable 
+
+
+// accessible from anywhere 
+var i = "I am global Variable";	// Global Variable
+			
+function show(){
+    var j = "I am Local Variable";	// Local Variable
+    console.log(i);	// i accessible in function
+    console.log(j);	// j accessible in function
+    
+}
+show();
+
+console.log(i);	// i accessible outside
+console.log(j);	// j not accessible outside
+
+function disp(){
+    console.log(i);	// i accessible in function
+    console.log(j);	// j not accessible in other function
+}
+disp();
+
+if(true){
+    console.log(i);	// accessible in block
+    console.log(j);	// j not accessible in block
+}
