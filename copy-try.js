@@ -427,3 +427,312 @@ if(true){
     console.log(i);	// accessible in block
     console.log(j);	// j not accessible in block
 }
+
+
+// function example 20, Local Variable
+
+
+
+
+function show(){
+    var j = "J a Local Vari of Outer Function"; // Local Variable
+    console.log(j);	// j accessible in function
+    function innerFun(){
+        var k = "K a Local Vari of inner fun";	// Local variable
+        console.log(k);	// k accessible in function
+        console.log(j);	// j accessible in function
+    }
+    innerFun();
+    console.log(j);	// j accessible in function
+    console.log(k);	// k not accessible for outer fun
+}
+show();
+
+
+// function example 21, Local Variable
+
+
+// Variable Hoisting
+var i = "Hello";
+console.log(i);
+function show(){
+    console.log(i);
+    var i = "GeekyShows";
+    console.log(i);
+}
+show();
+
+/*
+    var i; 
+    i = "Hello";
+    document.write(i + "<br>");
+    function show(){
+        var i;
+        document.write(i + "<br>");
+        i = "GeekyShows";
+        document.write(i + "<br>");
+    }
+    show();
+*/
+
+
+
+// function example 22, Local Variable
+
+
+var i = 10;
+			function show(){
+				var j = 20;
+				console.log(j);
+				console.log(i);
+			}
+			show();
+
+
+// function example 23, Local Variable
+
+
+
+function show(){
+    var j = "J a Local Vari of Outer Function"; // Local Variable
+    console.log(j);	// j accessible in function
+    function innerFun(){
+        var k = "K a Local Vari of inner fun";	// Local variable
+        console.log(k);	// k accessible in function
+        console.log(j );	// j accessible in function
+    }
+    innerFun();
+    console.log(j);	// j accessible in function
+    console.log(k);	// k not accessible for outer fun
+}
+show();
+
+
+// function example 24, function expression
+
+// Function Expression
+		// You can't use function expressions before you define them:
+        var disp = function show(){
+            console.log("Hello GeekyShows");
+        };
+        disp();
+
+
+
+
+// Storing Anonymous Function in variable
+var disp = function(){
+    console.log("Hello GeekyShows");
+};
+disp();
+
+
+
+// Passing Anonymous Function
+function disp(myfun){
+    return myfun();
+}
+
+console.log(disp(function(){
+    return "GeekyShows";
+}));
+
+
+
+// Returning Anonymous Function
+function disp(a){
+    return function(b){
+        return a+b;
+    };
+}
+var af = (disp(10));
+console.log(af(20));
+
+
+//  arrow functions 
+
+
+// Function Expression
+var myfun1 = function show(){
+    console.log("GeekyShows");
+};
+myfun1();
+// Anonymous Function 
+var myfun2 = function(){
+    console.log("GeekyShows");
+};
+myfun2();
+// Arrow Function 
+var myfun = () => {
+    console.log("GeekyShows");
+};
+
+myfun();
+
+
+
+
+
+// Arrow Function with parameter 
+			// One Parameter () optional  
+			var myfun1 = a => {			// var myfun = (a) => {
+				console.log(a);
+			};
+			myfun1(10);
+				
+			// More than One Parameter () required  
+			var myfun2 = (a, b) => {
+				console.log(a + b);
+				};
+				
+				myfun2(10, 20);
+	
+			// No Parameter () required  
+			var myfun0 = () => {
+				console.log("Geekyshows");
+				};
+				myfun0();
+
+
+
+// Arrow Function 
+var myfun1 = a => {
+    console.log(a);
+};
+myfun1(108);
+// Arrow Function 
+// use curly brackets when more than one statement			
+var myfun = a => {
+console.log(a);
+console.log("Hello"); };
+myfun(10);
+
+
+
+
+
+
+// Arrow Function
+
+
+// Function Expression
+var myfun1 = function show(a){
+    return a;
+};
+
+// Anonymous Function 
+var myfun2 = function(b){
+    return b;
+};
+
+// Arrow Function 
+var myfun = (c) => {
+    return c;
+};
+
+// a bit more shorter Arrow Function 
+var myfunN = (c) => c;	
+
+console.log(myfun1(10));
+console.log(myfun2(20));
+console.log(myfun(30));
+console.log(myfunN(40));
+/*
+var myfunN = (c) => { c };
+if you put curly bracket it wont work 
+if you want to put curly bracket then
+you have to write return c 
+More Example
+var myfunN=(c)=>c;		// Work, It automatically returns c
+var myfunN=(c)=>{c};	// Won't Work
+var myfunN=(c)=>{return c};	// Work
+
+var myfunN=(a,b)=> a+b;		// Work, It automatically returns a+b
+var myfunN=(a,b)=>{a+b};	// Won't Work
+var myfunN=(a,b)=>{return a+b};	// Work
+*/			
+
+
+
+
+
+// Arrow Function
+
+
+// Arrow Function with default para
+var myfunD = (a, b=20) => {
+    console.log(a + " " + b);
+};
+myfunD(10, 50);
+
+// Arrow Function with default para
+var myfunR = (a, ...args) => {
+    console.log(a + " " + args);
+};
+myfunR(10, 50, 60, 70);
+
+
+
+
+
+
+//  infoked function IIFE
+
+(function(){
+    var a = 10;
+    console.log(a);
+})();
+
+
+//  type of operator
+
+
+var	a = 13;	
+			console.log(typeof(a));	
+			console.log(typeof("Hello"));
+
+
+
+
+
+//  unfined in js 
+
+
+var	a;	
+			// Value not assigned Undefined
+			console.log(a);	
+			
+			// b doesnt exist undefined
+			console.log(typeof(b));	
+
+			// Undefined Error			
+			console.log(b);	
+
+		
+
+
+
+
+
+var	a = null;	
+console.log(a);	
+console.log(typeof(a));
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+ 
