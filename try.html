@@ -3,14 +3,14 @@
 	<head><title>Geeky Shows</title>
 	</head>
 	<body>
-	<script>
-		var i = 0;
-		for(; i<49;)
-		{
-			document.write(i);
-			i++;
-			document.write("  ");
-		}
-	</script>
-</body>
+		<script>
+			var fees = { };	
+			fees['Rahul'] = 100;
+			fees['total'] = function () {return(100+200+300);};
+			fees.total = function(){return(100+200+300);};
+			document.write(fees.total());
+		</script>
+	</body>
 </html>
+
+

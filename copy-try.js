@@ -720,10 +720,71 @@ console.log(typeof(a));
 
 
 
+// ---------------------     	OBJECT TOPICS IN JS		-------------------------------------------
+
+
+var fees = { };		// Declaring empty object
+			fees['Rahul'] = 100;	// initializing 
+			fees['Sumit'] = 200;
+			fees['Rohan'] = 300;
+		/*
+			fees.Rahul = 100;
+			fees.Sumit = 200;
+			fees.Rohan = 300;
+		*/
+            console.log(fees['Sumit']);	// Accessing value
+
 
 
 
     
+var fees = { };	
+fees['Rahul'] = 100;
+fees['total'] = function () {return(100+200+300);};
+// fees.total = function(){return(100+200+300);};
+document.write(fees.total());
+
+
+
+var fees = {Rahul:100, Sumit:200, Rohan:300};
+		/*
+			var fees = {
+						Rahul:100, 
+						Sumit:200, 
+						Rohan:300
+					   };
+		*/
+        console.log(fees['Rahul']);
+
+
+
+var fees = {Rahul:100, Sumit:200, Rohan:300, total: function(){return(100+200+300)}};
+/*
+	var fees = {
+				Rahul:100, 
+				Sumit:200, 
+				Rohan:300,
+				total: function(){return(100+200+300)}
+				};
+*/
+console.log(fees.total());
+
+
+
+// declare objects using conostuctor 
+
+
+
+var fees = new Object();
+			fees['Rahul'] = 100;
+			fees['Sumit'] = 200;
+			fees['Rohan'] = 300;
+		/*
+			fees.Rahul = 100;
+			fees.Sumit = 200;
+			fees.Rohan = 300;
+		*/	
+            console.log(fees['Rahul']);
 
 
 
@@ -731,8 +792,15 @@ console.log(typeof(a));
 
 
 
-
-
-
-
- 
+var fees = new Object();
+fees['Rahul'] = 100;
+fees['Sumit'] = 200;
+fees['Rohan'] = 300;
+fees['total'] = function (){return(100+200+300);};
+/*
+fees.Rahul = 100;
+fees.Sumit = 200;
+fees.Rohan = 300;
+fees.total = function(){return(100+200+300);};
+*/	
+console.log(fees.total());
