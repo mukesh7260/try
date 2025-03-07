@@ -1483,3 +1483,32 @@ var sam = new Samsung();
 // Accessing super class property model
 // using sub class object
 console.log(sam.show());	
+
+
+
+
+
+                                    //  ARRAY IN JAVA SCRIPTS 
+
+
+var stu = ["Rahul", "Raj" ];
+console.log(stu);
+console.log(typeof(stu));     
+
+
+
+
+var geek = [];	// empty array
+			geek[0] = "Rahul";
+			geek[1] = "Ram";
+			geek[2] = 56;
+			geek[3] = "Jay";
+			console.log(geek);
+
+var stu = ["Rahul", "Raj" ];
+console.log(stu[0]);
+console.log(typeof(stu)); 
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+console.log(geek);
