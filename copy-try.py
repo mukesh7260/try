@@ -201,3 +201,20 @@ print(t)
 #     if i not in v and i != ' ':
 #         print('consonant',i)
  
+
+
+
+class Polymer:
+    def abc(self , a= None, b = None,c = None):
+       if a != None and b != None and c != None:
+           return a + b + c
+       elif a != None and b != None:
+           return a + b
+       else:
+           return a 
+       
+p = Polymer()
+print(p.abc(2,3,4))
+print(p.abc(2,3))
+print(p.abc(2))
+print(p.abc())
