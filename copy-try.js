@@ -804,3 +804,682 @@ fees.Rohan = 300;
 fees.total = function(){return(100+200+300);};
 */	
 console.log(fees.total());
+
+
+
+
+
+//  object constructor
+var fees = {Rahul:100, Sumit:200, Rohan:300};
+		/*
+			var fees = {
+						Rahul:100, 
+						Sumit:200, 
+						Rohan:300
+					   };
+		*/
+            console.log(fees['Rahul']);
+
+
+
+var fees = {Rahul:100, Sumit:200, Rohan:300, total: function(){return(100+200+300)}};
+/*
+	var fees = {
+				Rahul:100, 
+				Sumit:200, 
+				Rohan:300,
+				total: function(){return(100+200+300)}
+				};
+*/
+	console.log(fees.total());
+
+
+
+
+
+var fees = new Object();
+	fees['Rahul'] = 100;
+	fees['Sumit'] = 200;
+	fees['Rohan'] = 300;
+/*
+	fees.Rahul = 100;
+	fees.Sumit = 200;
+	fees.Rohan = 300;
+*/	
+	console.log(fees['Rahul']);
+
+
+
+
+
+
+var fees = new Object();
+	fees['Rahul'] = 100;
+	fees['Sumit'] = 200;
+	fees['Rohan'] = 300;
+	fees['total'] = function (){return(100+200+300);};
+/*
+	fees.Rahul = 100;
+	fees.Sumit = 200;
+	fees.Rohan = 300;
+	fees.total = function(){return(100+200+300);};
+*/	
+console.log(fees.total());
+
+
+
+
+
+var fees = {Rahul:100, Sumit:200, Rohan:300};
+    console.log(fees['Rahul'] );
+    console.log(fees["Rahul"] );
+    console.log(fees.Rahul);
+
+
+
+
+
+var fees = {Rahul:100, "Super Man": 400};
+    console.log(fees['Super Man']);
+    console.log(fees["Super Man"]);
+   // console.log(fees.Super Man); // We Cannt access multiword key by dot notation
+
+
+
+
+
+
+var fees = {
+    Rahul: 100, 
+    Sumit: 200, 
+    Rohan: 300, 
+    total: function () { return(100+200+300); }			
+};
+console.log(fees.total());
+console.log(fees['total']());
+
+
+
+
+var fees = {Rahul:100, Sumit:200};
+			
+            console.log(fees.Rahul + " "+ fees.Sumit );
+			
+			fees.Sonam = 600;	// fees.['Sonam'] = 600;
+			
+			console.log(fees.Sonam + " " + fees.Rahul + " "+ fees.Sumit);
+			
+			fees.show = function () {};
+			
+			console.log(fees);
+
+
+
+var fees = {Rahul:100, Sumit:200};
+
+	console.log(fees.Rahul + " "+ fees.Sumit );
+
+	delete fees.Rahul;
+	console.log(fees.Rahul + " "+ fees.Sumit);
+	console.log(fees);
+
+
+
+
+function mobile( ) {
+	return {
+		model: 'Galaxy',
+		price: function(){return "Price Rs. 3000";} 
+	};
+}
+var samsung = mobile( );
+console.log(samsung.model + " "+samsung.price( ));
+	
+
+
+
+
+function mobile(model_no) {
+    return {
+        model: model_no,
+        price: function(){
+            return "Price is Rs. 3000";
+        } 
+    };
+}
+var samsung = mobile('galaxy');
+var nokia = mobile('3310');
+console.log(samsung.model + " "+samsung.price( ));
+console.log(nokia.model + " "+nokia.price( ));
+
+
+
+
+
+function Mobile(){
+    this.model = '3310';
+    this.price = function(){
+        console.log(this.model + " Price Rs. 3000");
+    }
+}
+
+var samsung = new Mobile();
+samsung.price();
+
+
+
+
+
+function Mobile(model_no){
+    this.model = model_no;
+    this.price = function(){
+        console.log(this.model + " Price Rs.3000");
+    }
+}
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');
+samsung.price();
+nokia.price();
+
+
+
+
+function Mobile(model_no){
+    this.model = model_no;
+    this.color = 'white';
+    this.ram = '4GB';
+    this.price = function(){
+        console.log(this.model + " Price Rs.3000 ");
+    };
+}
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');
+for(var key in nokia)
+{
+    console.log(nokia[key]);
+}
+
+
+
+
+
+
+function Mobile(model_no){
+    this.model = model_no;
+    this.color = 'white';
+    this.ram = '4GB';
+    this.price = function(){
+        console.log(this.model + " Price Rs.3000 ");
+    };
+}
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');
+// Method wont display
+for(var key in nokia){
+    if(typeof nokia[key] !== 'function'){
+        console.log(nokia[key]);
+    }	
+}
+
+/* value with key, Method wont display
+for(var key in nokia){
+    if(typeof nokia[key] !== 'function'){
+    console.log(key + " : " + nokia[key] + "<br>"); 
+    }
+}
+*/
+
+
+
+function Mobile(model_no){
+    this.model = model_no;
+    this.memory = 4;
+}
+
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');
+
+if(typeof nokia.memory !== 'undefined'){
+    console.log("Available");
+} else {
+    console.log("Doesnt Exist");
+}
+
+
+
+
+
+
+function Mobile(model_no){
+    this.model = model_no;
+    this.memory = 4;
+}
+
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');
+
+if('memory' in nokia){
+    console.log("Available");
+} else {
+    console.log("Doesnt Exist");
+}
+
+
+
+
+
+function Mobile(model_no){
+    this.model = model_no;
+    this.color = 'white';
+}
+
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');
+
+if(nokia.hasOwnProperty('color')){
+    console.log("Available");
+} else {
+    console.log("Doesnt Exist");
+}
+
+
+
+
+
+
+
+var  Mobile = function(model_no, sprice){
+    this.model = model_no;
+    this.color = 'white';
+    this.price = 3000;
+    this.sp = sprice;
+    this.sellingprice = function(){
+        return (this.price + this.sp);
+    };
+    this.data = function(){
+        console.log(" Model No: " + this.model + " Price: " + this.sellingprice());
+    }
+};
+var samsung = new Mobile('Galaxy', 2000);
+var nokia = new Mobile('3310', 1000);
+nokia.data();
+
+
+
+
+var  Mobile = function(model_no, sprice){
+    this.model = model_no;
+    this.color = 'white';
+    var price = 3000;	// private property
+    this.sp = sprice;
+    // Private Method
+    var show = function() { return "Hello World";};
+};
+var samsung = new Mobile('Galaxy', 2000);
+var nokia = new Mobile('3310', 1000);
+console.log(nokia.price);
+console.log(nokia.show());
+
+
+
+
+
+var  Mobile = function(model_no, sprice){
+    this.model = model_no;
+    this.color = 'white';
+    var price = 3000;	// private property
+    this.sp = sprice;
+    // Private Method
+    var show = function shows() { return show;};
+};
+var samsung = new Mobile('Galaxy', 2000);
+var nokia = new Mobile('3310', 1000);
+console.log(nokia.price);
+console.log(nokia.show);
+
+
+
+
+
+var  Mobile = function(model_no, sprice){
+    this.model = model_no;
+    this.color = 'white';
+    var price = 3000;	// private property
+    this.sp = sprice;
+    // Public Method
+    this.sellingprice = function(){		
+        return (price);
+    };
+};
+var samsung = new Mobile('Galaxy', 2000);
+var nokia = new Mobile('3310', 1000);
+console.log(nokia.price);
+console.log(nokia.sellingprice());
+
+
+
+
+var  Mobile = function(model_no){
+    // Instance Member
+    this.model = model_no;
+    this.price = 3000;
+};
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');			
+// classname.prototype.key = 'value';
+// Prototype Member
+Mobile.prototype.color = 'white';
+
+console.log(samsung.color);
+console.log(samsung);
+
+
+
+
+
+
+
+var  Mobile = function(model_no){
+    // Instance Member
+    this.model = model_no;
+    this.price = 3000;
+};
+var samsung = new Mobile('Galaxy');
+var nokia = new Mobile('3310');			
+// classname.prototype.key = 'value';
+// Prototype Member
+Mobile.prototype.color = 'white';
+for (var key in samsung){
+    console.log(key);
+}
+
+
+
+
+
+
+// It will return Object.prototype
+console.log(Object.prototype);
+
+// creating an empty object and prototype object of this 
+// object is Object.prototype
+var b = {};
+
+// We are checking what is the Prototype Object of b which 
+// should be Object.prototype
+// b will inherit all properties of Object.prototype Object
+console.log(Object.getPrototypeOf(b)); 
+
+// Further check what is the Prototype Object of Object.prototype it should be null
+console.log(Object.getPrototypeOf(Object.prototype)); 
+
+// Check the above stuff with new operator
+var b1 = new Object();
+console.log(Object.getPrototypeOf(b1));
+
+// checking with Array
+// First check what is the Array.prototype
+console.log(Array.prototype);
+
+// creating empty Array Object
+var b2 = new Array();
+
+// check what is the Prototype of Object b2
+// it will be Array.Prototype
+console.log(Object.getPrototypeOf(b2));
+
+// Now check what is the Prototype Object of Array.prototype
+console.log(Object.getPrototypeOf(Array.prototype));
+
+
+
+
+
+
+
+
+
+function Mobile(){
+
+}
+// Mobile is the object created by Function which is actually Function itself
+console.log(Mobile);
+
+// prototype is a property of Mobile which points to the Prototype Object of Mobile
+console.log(Mobile.prototype);  // it will show Prototype Object of Mobile Function
+
+// Creating a new Object using new keyword
+var lg = new Mobile();
+
+// When you create a new object of that function using new keyword JS Engine creates an object and sets a property named __proto__ which points to its function’s prototype object
+console.log(lg.__proto__);                // Mobile.prototype
+
+// Verifying all stuffs
+console.log(lg.__proto__ === Mobile.prototype);     // true
+console.log(Mobile === lg.__proto__.constructor);      // true
+console.log(Mobile === Mobile.prototype.constructor);   // true
+    
+
+
+
+
+
+
+function Mobile(){
+}
+// Creating a new Object using new keyword
+var lg = new Mobile();
+// This will show undefined becoz a is neither defined in the funtion nor in the function's prototype
+// it first checks if lg object have property a as it doesn't have it so it go to its prototype object pointed by __proto__ and ask him if he has property a as it also doesn't have it so finally we receive undefined. This is how it works behind the browser and JS Engine is the responsible for this task
+console.log(lg.a);
+console.log(lg);
+
+
+
+
+
+
+
+function Mobile(){
+            
+}
+ // This property is defined in Function's Prototype Object so all Objects will have access to this property and this is just one single property for all objects. It doesn't make copies for objects separately. usually we defined methods as a prototype method member rather than Prototype variable memeber
+ Mobile.prototype.a = 10;   
+
+// Creating a new Object using new keyword
+var lg = new Mobile();
+
+// It first checks if lg object have property a as it doesn't have it so it go to its prototype object pointed by __proto__ and ask him if he has property a as it has so finally we receive 10. This is how it works behind the browser and JS Engine is the responsible for this task
+console.log(lg.a);
+
+
+
+
+
+function Mobile(){
+    this.a = 20;
+}
+ // This property is defined in Function's Prototype Object so all Objects will have access to this property and this is just one single property for all objects. It doesn't make copies for objects separately. usually we defined methods as a prototype method member rather than Prototype variable memeber
+ Mobile.prototype.a = 10;   
+
+// Creating a new Object using new keyword
+var lg = new Mobile();
+
+// It first checks if lg object have property a as it has so it will return 10 and will stop checking further in the prototype object
+console.log(lg.a);      // 20
+
+
+
+
+
+
+
+// Super Class
+var Mobile = function(){
+    this.a = 10;
+}
+
+// Prototype Property of Mobile
+Mobile.prototype.z = 30;
+
+// Sub Class
+var Samsung = function(){
+    // It initialize and call Super class constructor without this you can not access super class property using sub class object
+    Mobile.call(this);      
+    this.b = 20;
+}
+
+// Prototype Inheritance
+Samsung.prototype = Object.create(Mobile.prototype);
+Samsung.prototype.constructor = Samsung;
+
+var s = new Samsung();
+console.log(s.a);
+console.log(s.b);
+console.log(s.z);
+
+
+
+
+
+
+var Mobile = function(){
+
+}
+Mobile.prototype.getModel = function(){ return this.model; }
+
+var Samsung = function(model, price){
+    this.model = model;
+    this.price = price;
+}
+
+var Lenovo = function(model){
+    this.model = model;
+}
+
+// inheritance 
+Samsung.prototype = Object.create(Mobile.prototype);
+Samsung.prototype.constructor = Samsung;
+Lenovo.prototype = Object.create(Mobile.prototype);
+Lenovo.prototype.constructor = Lenovo;
+
+// always write child prototype after inheritance else it wont work
+Samsung.prototype.getPrice = function(){ return this.price; }
+
+var galaxy = new Samsung("Galaxy", 3000);
+var  phab2 = new Lenovo('Phab 2')
+
+console.log(galaxy.getModel());
+console.log(galaxy.getPrice());
+console.log(phab2.getModel());
+
+
+
+
+
+
+// Function for inheritance
+function extend(Child, Parent) {
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.constructor = Child;
+}
+var Mobile = function () {
+
+}
+Mobile.prototype.getModel = function () {
+    return this.model;
+}
+
+var Samsung = function (model, price) {
+    this.model = model;
+    this.price = price;
+}
+
+var Lenovo = function (model) {
+    this.model = model;
+}
+
+// inheritance 
+extend(Samsung, Mobile);
+extend(Lenovo, Mobile);
+
+// always write child prototype after inheritance else it wont work
+Samsung.prototype.getPrice = function () {
+    return this.price;
+}
+
+var galaxy = new Samsung("Galaxy", 3000);
+var phab2 = new Lenovo('Phab 2')
+
+console.log(galaxy.getModel());
+console.log(galaxy.getPrice());
+console.log(phab2.getModel());
+
+
+
+
+
+
+
+var Mobile = function(model){
+    this.model = model;
+}
+Mobile.prototype.getModel = function(){ return this.model; }
+
+var Samsung = function(model, price){
+Mobile.call(this, model)
+this.price = price;
+}
+
+// inheritance 
+Samsung.prototype = Object.create(Mobile.prototype);
+Samsung.prototype.constructor = Samsung;
+
+
+var galaxy = new Samsung("Galaxy", 3000);
+
+console.log(galaxy.getModel());
+console.log(galaxy.model);
+
+
+
+
+
+
+
+
+
+// Function for inheritance
+function extend(Child, Parent){
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.constructor = Child;
+}
+
+// Super Class
+var Mobile = function() {
+    
+}
+// Prototype Member
+Mobile.prototype.show = function(){
+    return "Super Class Method";
+}
+
+// Sub Class
+var Samsung = function(){
+
+}
+
+// sub class Samsung extending super class Mobile
+extend(Samsung, Mobile);
+
+// Prototype Member for Sub Class
+Samsung.prototype.show = function(){
+    return "Sub Class Method";
+}
+
+// Creating object of sub class Samsung
+var sam = new Samsung();
+
+// Accessing super class property model
+// using sub class object
+console.log(sam.show());	
