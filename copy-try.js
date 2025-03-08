@@ -1660,3 +1660,314 @@ for(var value of geek){
 }
 
 */	
+
+
+
+
+
+
+
+
+
+/*
+			var geek = [[], [], []];
+			geek[0][0] = "Rahul";
+			geek[0][1] = "Dell";
+			geek[0][2] = 10;
+			geek[1][0] = "Sonam";
+			geek[1][1] = "HP";
+			geek[1][2] = 20;
+			geek[2][0] = "Sumit";
+			geek[2][1] = "Zed";
+			geek[2][2] = 30;
+		*/
+		// Using Array Literal
+        var geek = [
+            ["Rahul", "Dell", 10], 
+            ["Sonam", "HP", 20], 
+            ["Sumit", "Zed", 30]
+        ];
+
+
+// using Array Constructor
+// var geek = new Array(["Rahul", "Dell", 10], ["Sonam", "HP", 20], ["Sumit", "Zed", 30]);
+        
+for(let i =0; i<3; i++){
+for(let j =0; j<3; j++){
+    // console.log(geek[i][j] + " ");
+    console.log( i + " " + j + " " + geek[i][j] + " ");
+}
+console.log()
+}
+
+
+
+
+// Undefined 2D array
+			
+			// using array literal
+            var geek = [[], []];
+			console.log(geek)
+			// using array constructor
+			// var geek = new Array([], []);
+			
+			for(let i =0; i<2; i++){
+				for(let j =0; j<3; j++){
+					console.log(i + " " + j + "|");
+				}
+				console.log()
+			}
+
+
+
+var geek = [];
+var rows = 2;
+var cols = 3;
+for(var i = 0; i < rows; i++){ 
+    geek[i] = []; 
+}		
+for(var i =0; i< rows; i++){
+    for(var j = 0; j< cols; j++){
+        console.log(geek[i][j] + "  ");
+        // console.log(i + " "+ j + "|");
+    }
+    console.log();
+}
+
+
+
+
+
+var rows = 3;
+			var cols = 2;
+			var geek = new Array(rows);
+			for (var i = 0; i < rows; i++) {
+			  geek[i] = new Array(cols);
+			}
+		
+			for(var i =0; i<rows; i++){
+				for(var j=0; j<cols; j++){
+					console.log(geek[i][j] + "  ");
+					// console.log(i + " "+ j + "|");
+				}
+				console.log();
+			}
+
+
+
+
+// Defining 2D Array
+// var rows = 3;
+// var cols = 2;
+// var geek = new Array(rows);
+// for (var i = 0; i < rows; i++) {
+//   geek[i] = new Array(cols);
+// }
+
+// // Input for Array
+// const prompt = require("prompt-sync")();
+
+// for(var i =0; i<rows; i++){
+//     for(var j=0; j<cols; j++){
+//         geek[i][j] = prompt("Enter Name: ");
+//     }
+// }
+
+// // Displaying value
+// for(var i =0; i<rows; i++){
+//     for(var j = 0; j<cols; j++){
+//         console.log(i + " " + j + geek[i][j] + " | ");
+        
+//     }
+//     console.log();
+// }
+
+
+
+
+
+// concat method
+			
+			// Concat Values
+			var geek1 = ["Rahul", "Sonam", "Sumit"];
+			var new_geek = geek1.concat("Raj", "Rohit");
+			console.log(new_geek);
+			
+			// concat two arrays
+			var geek1 = ["Rahul", "Sonam", "Sumit"];
+			var geek2 = ["Raj", "Rohan"];
+			var new_geek = geek1.concat(geek2);
+			console.log(new_geek);
+			
+			// concat Three arrays
+			var geek1 = ["Rahul", "Sonam", "Sumit"];
+			var geek2 = ["Raj", "Rohan"];
+			var geek3 = ["Priya", "Komal"];
+			var new_geek = geek1.concat(geek2, geek3);
+			console.log(new_geek);
+
+
+
+
+
+
+// join method
+var geek = ["Rahul", "Sonam", "Sumit"];
+			
+// separated by /
+var new_geek = geek.join(" / ");
+console.log(new_geek);
+
+// separated by or
+var new_geek = geek.join(" or ");
+console.log(new_geek);
+
+// separated by no space
+var new_geek = geek.join(" ");
+console.log(new_geek);
+
+
+
+
+
+
+// Reverse Method
+var geek = ["Rahul", "Sonam", "Sumit"];
+geek.reverse();
+console.log(geek);
+
+
+
+
+
+// Slice Method
+var geek = ["Rahul", "Sonam", "Sumit", "Raj", "Rohan"];
+var new_geek = geek.slice(1, 3);
+console.log(new_geek);
+
+var new_geek = geek.slice(-3, -1);
+console.log(new_geek);
+
+var new_geek = geek.slice(1, 9);
+console.log(new_geek);
+
+
+
+
+// Splice Method
+var geek = ["Rahul", "Sonam", "Sumit", "Raj", "Rohan"];
+console.log(geek);
+	
+// Remove All elements from index 2 (including index 2)
+geek.splice(2);
+console.log(geek);
+
+// Remove 1 element from index 2
+// it will remove index 2 element
+geek.splice(2, 1);
+console.log(geek);
+
+// Remove 2 element from index 2
+// it will remove index 2 and 3, element
+geek.splice(2, 2);
+console.log(geek);
+
+// Remove 0 element from index 2 and insert "Dell"
+// it will not remove anything but will insert "Dell" at position 2
+geek.splice(2, 0, "Dell");
+console.log(geek);
+
+// Remove 2 element from index 2 and insert "Dell" and "HP"
+geek.splice(2, 2, "Dell", "HP");
+console.log(geek);
+	
+
+
+var geek = ["Rahul", "Sonam", "Sumit", "Raj"];
+			geek.toString();
+			console.log(geek);
+
+
+
+
+
+var geek = ["Rahul", "Sonam", "Sumit", "Raj"];
+var result1 = Array.isArray(["Rose", "Khoj"]);
+var result2 = Array.isArray("IAmString");
+var result3 = Array.isArray(geek);
+console.log(result1);
+console.log(result2);
+console.log(result3);
+
+
+
+
+
+
+var geek = ["Rahul", "Sonam", "Raj", "Sumit", "Raj"];
+			var position1 = geek.indexOf("Raj");
+			var position2 = geek.indexOf("Raj", 3);
+			var position3 = geek.indexOf("Priti");
+			console.log(position1);
+			console.log(position2);
+			console.log(position3);
+
+
+
+
+var geek = ["Rahul", "Sonam", "Raj", "Sumit"];
+
+// All elements Don
+geek.fill("Don");	
+console.log(geek);
+
+// fill Don start with Index 1 to 3 (3 not included)
+geek.fill("Don", 1, 3);
+console.log(geek);
+
+// Creating empty array length 3 and fill it with Jay
+var new_arr = new Array(3).fill("Jay");
+console.log(new_arr);
+
+
+
+
+
+var geek = ["Rahul", "Sonam", "Raj", "Sumit"];
+			// it will add two new elements at the end as well return new length of array
+			var geek_length = geek.push("Dell", "HP");
+			console.log(geek);
+			console.log(geek_length);
+
+
+
+
+var geek = ["Rahul", "Sonam", "Raj", "Sumit"];
+// it will add two new elements at the beginning as well return new length of array
+var geek_length = geek.unshift("Dell", "HP");
+console.log(geek);
+console.log(geek_length);
+
+
+
+
+
+var geek = ["Rahul", "Sonam", "Raj", "Sumit"];
+			// it will remove element from the beginning as well return removed element
+			var geek_removed = geek.shift();
+			console.log(geek);
+			
+			// removed element
+			console.log(geek_removed);
+
+
+
+
+
+var geek = ["Rahul", "Sonam", "Raj", "Sumit"];
+// it will remove last element and return removed element
+var geek_removed = geek.pop();
+console.log(geek);
+
+// removed element
+console.log(geek_removed);
