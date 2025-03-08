@@ -1511,4 +1511,152 @@ console.log(typeof(stu));
 
 
 var geek = ["Rahul", "Ram", 56, "Jay"];
+console.log(geek); 
+
+
+
+
+// var geek = [];
+var geek = new Array();		// empty array
+geek[0] = "Rahul";
+geek[1] = "Ram";
+geek[2] = 56;
+geek[3] = "Jay";
+console.log(geek[2]);
+
+
+
+// var geek = ["Rahul", "Ram", 56, "Jay"];
+var geek = new Array("Rahul", "Ram", 56, "Jay");
+console.log(geek[3])
+
+
+
+var geek = new Array(10);
 console.log(geek);
+
+
+
+/*
+				var geek = ["Rahul", "Ram", 56, "Jay"];
+				console.log(geek);
+
+			*/
+			var geek = [];
+			geek[0] = "Rahul";
+			geek[1] = "Ram";
+			geek[2] = 56;
+			geek[3] = "Jay";
+			geek[4] = "Extra";
+			console.log(geek);
+
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+console.log (geek);
+geek[0] = "Rohit";
+console.log(geek);
+
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+			var geekyshows = geek;
+			console.log(geekyshows);
+			console.log(geek);
+			geekyshows[0] = "Rohit";
+			console.log(geek);
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+console.log(geek);
+delete geek[0];
+console.log(geek);
+console.log(geek[0]);
+
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+console.log(geek.length); 
+
+
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+		//  var geek = new Array("Rahul", "Ram", 56, "Jay");
+			for(let i=0; i<=3; i++){
+				console.log(geek[i]);
+			}
+			
+			/* In case if you dont know array length use length property with for loop 
+			for(let i=0; i<geek.length; i++){
+				document.write(geek[i] + "<br>");
+			}
+			*/
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+geek.forEach(function (value, index) {
+    console.log(value + " " + index);
+});
+
+
+
+
+var geek = ["Rahul", "Ram", 56, "Jay"];
+			for(let value of geek){
+				console.log(value);
+			}
+
+
+
+
+
+
+
+
+// Defining Array         install this one packege for user input in JAVA SCRIPT : npm install prompt-sync
+
+const prompt = require('prompt-sync')();
+var elements = prompt("Enter number of Elements: ");
+var geek= [];
+
+// Input for Array
+for(var i = 0; i<=elements; i++){
+    geek[i] = prompt("Enter Name: ");
+}
+// Display Values
+for(var value of geek){
+    console.log(value);
+}
+
+
+
+
+
+
+
+
+/*	
+// Defining Array
+var geek = new Array(3);		// length of array 3
+
+// Array Length
+var ln = geek.length;
+
+// Input 
+for(let i =0; i<= ln; i++){
+    geek[i] = prompt("Enter Name: ");
+}
+
+// Display Values
+for(var value of geek){
+    document.write(value + "<br>");
+}
+
+*/	
