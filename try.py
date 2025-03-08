@@ -192,17 +192,23 @@
 
 # method overloading example in python 
 
-class Polymer:
-    def abc(self , a= None, b = None,c = None):
-       if a != None and b != None and c != None:
-           return a + b + c
-       elif a != None and b != None:
-           return a + b
-       else:
-           return a 
+# class Polymer:
+#     def abc(self , a= None, b = None,c = None):
+#        if a != None and b != None and c != None:
+#            return a + b + c
+#        elif a != None and b != None:
+#            return a + b
+#        else:
+#            return a 
        
-p = Polymer()
-print(p.abc(2,3,4))
-print(p.abc(2,3))
-print(p.abc(2))
-print(p.abc())
+# p = Polymer()
+# print(p.abc(2,3,4))
+# print(p.abc(2,3))
+# print(p.abc(2))
+# print(p.abc())
+
+
+
+import random 
+a = random.randint(000000,999999)
+print(f'{a:06d}')

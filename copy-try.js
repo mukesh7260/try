@@ -1971,3 +1971,20 @@ console.log(geek);
 
 // removed element
 console.log(geek_removed);
+
+
+
+
+
+//  print random number 
+
+
+let a = Math.floor(Math.random() * 900000) + 100000;
+console.log(a);
+
+
+or 
+
+
+let a = String(Math.random()).slice(2, 8);
+console.log(a);
