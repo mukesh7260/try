@@ -225,3 +225,63 @@
 
 
 
+# a = 10 
+# def add():
+#     global a
+#     a = 40  # change the value of global variable inside the function add()
+#     print(a)
+#     a = 20  # local variable 
+#     print(a) 
+# add() 
+
+
+
+
+# class Abcde:
+#     def __init__(self,a ,b):
+#         self.a = a 
+#         self.b = b 
+#         print(a)
+#         print(b)
+
+# a = Abcde(10,20)
+
+
+
+# class Abcde:
+#     def __init__(self,a ,b):
+#         print(a)
+#         print(b)
+# a = Abcde(10,20) 
+
+
+# class Abcd:
+#     def __init__(self):
+#         self.a = 10   # a ,b is instance variable . 
+#         self.b = 20   # instance method : - those function contains self as a parameter
+#         print(self.a)
+#         print(self.b)
+
+# a = Abcd()
+
+
+
+
+# class Computer:
+#     def abcd(self):
+#         print('I m fathor of computer ') 
+
+# class Laptop(Computer):
+#     def abc(self):
+#         print('I m child of computer') 
+
+# l = Laptop()
+# l.abc()
+# l.abcd()
+
+
+
+
+
+
+    
