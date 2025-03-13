@@ -396,4 +396,28 @@ n = int(input("Enter a number: "))
 fact = 1
 for i in range(1,n+1):
     fact = fact * i 
-print(fact)
+print(fact) 
+
+            # Diamond shape 
+
+
+n = int(input('Enter how many rows : ')) 
+for i in range(n+1):
+    print('  '*(n-i) + ' *  '*i)
+for i in range(n-1,-1,-1):
+    print('  '*(n-i) + ' *  '*i) 
+
+
+
+
+
+
+n = 453768
+def reverse(n):
+    sum = 0 
+    while n > 0:
+        r = n % 10 
+        sum = sum * 10 + r 
+        n = n // 10 
+    print(sum)
+reverse(n)

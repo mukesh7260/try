@@ -208,6 +208,20 @@
 # print(p.abc())
 
 
+# n = int(input("entre how many number rows : ")) 
+# for i in range(n+1):
+#     print('  '*(n-i) + '* '*i) 
+# for i in range(n-1,-1,-1):
+#     print('  '*(n-i) + '* '*i) 
+
+
+
+
+# n = int(input("entre how many number rows : ")) 
+# for i in range(n+1):
+#     print('*'*(n-i)) 
+# for i in range(n-1,-1,-1): 
+#     print('*'*(n-i)) 
 
 
 
