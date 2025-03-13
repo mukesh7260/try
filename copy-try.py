@@ -218,3 +218,34 @@ print(p.abc(2,3,4))
 print(p.abc(2,3))
 print(p.abc(2))
 print(p.abc())
+
+
+
+import random 
+a = random.randint(000000,999999)
+print(f'{a:06d}')
+
+
+l = [98,3,24,56,1,98,54] 
+for i in range(len(l)):
+    for j in range(len(l)):
+        if l[i] < l[j]:
+            l[i],l[j] = l[j],l[i] 
+print(l)
+
+
+import random 
+a = random.randint(000000,999999)
+print(f'{a:06d}')
+
+
+
+s = 'rohit sharma'
+d = {}
+for i in s:
+    if i in ' ':
+        continue 
+    a = d.get(i,0) + 1 
+    d[i] = a 
+for k , v in d.items():
+    print(f'{k} - {v}')

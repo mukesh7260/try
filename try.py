@@ -208,7 +208,3 @@
 # print(p.abc())
 
 
-
-import random 
-a = random.randint(000000,999999)
-print(f'{a:06d}')
