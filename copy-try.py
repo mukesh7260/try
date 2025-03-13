@@ -249,3 +249,151 @@ for i in s:
     d[i] = a 
 for k , v in d.items():
     print(f'{k} - {v}')
+
+
+
+
+import random 
+a = random.randint(000000,999999)
+print(f'{a:06d}')
+
+
+
+s = 'rohit sharama' 
+d = {}
+for i in s:
+    if i in ' ':
+        continue 
+    d[i] = d.get(i,0) + 1 
+for k , v in d.items():
+    print(f'{k} - {v}')
+
+
+
+
+
+s = 'rohit shrama'
+d = {}
+for i in s:
+    if i in ' ':
+        continue
+    elif i in d:
+        d[i] = d[i] + 1 
+    else:
+        d[i] = 1 
+for k , v in d.items():
+    print(f'{k} - {v}') 
+
+
+
+
+
+s = 'rohit shrama' 
+v = ['a','e','i','o','u'] 
+vow = [] 
+const = []
+for i in s:
+    if i in v :
+        vow.append(i)
+    else:
+        const.append(i) 
+print(vow)
+print(const) 
+
+
+
+for i in range(1,1000):
+    if i  > 1:
+        for j in range(2,i):
+            if i % j == 0:
+                break 
+        else:
+            print(i, end= ' ') 
+
+
+
+
+n1 = int(input("enter first number : "))
+n2 = int(input("enter second number : ")) 
+for i in range(n1, n2):
+    if i > 1:
+        for j in range(2,i):
+            if i % j == 0:
+                break 
+        else:
+            print(i , end= ' ') 
+
+
+
+
+
+l = [98,3,24,56,1,98,54]
+for i in range(len(l)):
+    for j in range(len(l)):
+        if l[i] < l[j]:
+            l[i],l[j] = l[j],l[i] 
+print(l) 
+
+
+
+
+l = [98,3,24,56,1,98,54] 
+max = l[0] 
+for i in range(len(l)):
+    if l[i] > max :
+        max = l[i] 
+print(max)
+
+
+
+
+# example of polymerphism 
+
+
+class Polymer:
+    def abc(self, a=None,b=None , c = None):
+        if a!=None and b!=None and c!=None:
+            return a + b + c 
+        elif a!=None and b!=None:
+            return a + b 
+        elif a!=None:
+            return a 
+        else:
+            return a 
+        
+p = Polymer()
+print(p.abc(2,3,4))
+print(p.abc(2,3))
+print(p.abc(2))
+print(p.abc())
+
+
+
+import re 
+s = input("enter mobile number : ")
+f = re.match(r'(\+91|91|0)?[\s]?[7-9][0-9]{9}',s)
+if f:
+    print("valid")
+else:
+    print("invalid")
+
+
+
+
+n = int(input("Enter a number: ")) 
+def fact(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * fact(n-1) 
+f = fact(n)
+print(f) 
+
+
+
+
+n = int(input("Enter a number: ")) 
+fact = 1
+for i in range(1,n+1):
+    fact = fact * i 
+print(fact)
