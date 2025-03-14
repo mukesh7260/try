@@ -515,3 +515,63 @@ class Abcd:
         print(self.b)
 
 a = Abcd()
+
+
+
+
+s = 'india is great'
+a = s.split() 
+b = a[::-1]
+print(b)
+
+# o/p: - great is india
+
+
+
+s = 'india is great'
+a = s.title()
+b = a[::-1] 
+print(b)
+
+# o/p : - taerG sI aidnI 
+
+
+
+
+
+
+
+
+# s = 'Durga Software Solutions'
+# a = s.split()
+# for i in a:
+# 	b = i[::-1]
+# 	print(b,end=' ')
+# # O/P:- agruD erawtfoS snoituloS 
+
+
+
+
+# s = 'patna is beatiful place'
+# a = s.split()
+# a[2] = 'place'
+# a[3] = 'beatiful'
+# mk = ''
+# for n in a:
+# 	mk = mk + ' '+  n 
+# print(mk)
+
+# # O/P:- patna is place beatiful
+
+
+
+s = 'India Is Great'.split()
+for a in s:
+    b = a[::-1]
+    print(b)
+    c = ''.join(b)
+    print(c, end=" ") 
+
+
+
+# O/P:- aidnI sI taerG 
