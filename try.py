@@ -279,10 +279,51 @@
 # l.abc()
 # l.abcd()
 
+# count = 0 
+# for i in range(1,1000):
+#     if i > 1:
+#         for j in range(2,i):
+#             if i % j == 0:
+#                 break 
+#         else:
+#             count = count + 1 
+#             print(i , end= ' ')   
+          
+# print('total number of prime number : ' ,count) 
 
 
 
 
+# s = 'india is great' 
+# a = s.split()
+# b = a[::-1]
+# c = ' '.join(b)
+# print(c)
+
+
+# s = 'india is great'.split()
+# for  i in s:
+#     a = i[::-1]
+#     b = a.title()
+#     c = b[::-1]
+#     d = ''.join(c)
+#     print(d,end=' ')
+
+
+# o/p : - indiA iS greaT 
 
 
 
+# s = 'patna is beautifull place'
+# a = s[::-1] 
+# b = a.title()
+# c = b[::-1]
+# print(c,end=' ') 
+
+
+# #  patnA iS beautifulL placE
+
+
+
+s = 'patna is beatiful place'.title()
+print(s,end=' ') 
