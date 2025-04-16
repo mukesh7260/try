@@ -325,5 +325,45 @@
 
 
 
-s = 'patna is beatiful place'.title()
-print(s,end=' ') 
+# s = 'patna is beatiful place'.title()
+# print(s,end=' ') 
+
+
+# s = 'patna is beatiful place' 
+# v = ['a','e','i','o','u']       
+# vowcont = [] 
+# vconst = []
+# for i in s:
+#     if i in ' ':
+#         continue 
+#     elif i in v:
+#         vowcont.append(i)
+#         a = len(vowcont)
+#     else:
+#         vconst.append(i)
+#         b = len(vconst)
+# print(vowcont)
+# print(vconst)
+# print('vowel count :' ,a) 
+# print('conostant count : ' ,b)
+ 
+# a = 'hello world'
+# a = a[:6] + '*' + a[7:]
+# print(a)
+
+
+# s = 'hello world' 
+# a = s[:6] + '*' + s[7:]
+# print(a)
+
+
+
+d1 = {'namee':'mukesh','ages':23,'places':'patna'}
+d2 = {'namge':'rohit','agsse':25,'placess':'delhi'}
+d2.update({'namge':'rohit sharma'})
+d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
+d = [d1,d2,d3]
+print(d)
+# d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
+# d3.update({'namhe':'Rohit sharma'})
+# print(d3) 
