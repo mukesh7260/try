@@ -358,12 +358,16 @@
 
 
 
-d1 = {'namee':'mukesh','ages':23,'places':'patna'}
-d2 = {'namge':'rohit','agsse':25,'placess':'delhi'}
-d2.update({'namge':'rohit sharma'})
-d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
-d = [d1,d2,d3]
-print(d)
+# d1 = {'namee':'mukesh','ages':23,'places':'patna'}
+# d2 = {'namge':'rohit','agsse':25,'placess':'delhi'}
+# d2.update({'namge':'rohit sharma'})
+# d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
+# d = [d1,d2,d3]
+# print(d)
 # d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
 # d3.update({'namhe':'Rohit sharma'})
 # print(d3) 
+
+
+
+

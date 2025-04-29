@@ -667,7 +667,7 @@ s = 'hello world'
 a = s[:6] + '*' + s[7:]
 print(a)
 
-
+# change the character of string
 
 # combine the dictionary 
 
@@ -702,3 +702,30 @@ d2.update({'namge':'rohit sharma'})
 d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
 d = [d1,d2,d3]
 print(d)
+
+
+#  prime number program . 
+
+prime = []
+for i in range(1,1000):
+    if i > 1:
+        for j in range(2,i):
+            if i % j == 0:
+                break 
+        else:
+            prime.append(str(i)) 
+print(', '.join(prime))
+
+
+
+
+prime = []
+for i in range(1,1000):
+    if i > 1:
+        for j in range(2,i):
+            if i % j == 0:
+                break 
+        else:
+            prime.append(i) 
+# print(', '.join(prime))
+print(prime)
