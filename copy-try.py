@@ -729,3 +729,78 @@ for i in range(1,1000):
             prime.append(i) 
 # print(', '.join(prime))
 print(prime)
+
+
+
+
+s = 'mukesh kumar' 
+d = {}
+for i in s:
+    if i in ' ':
+        continue 
+    elif i in s:
+        d[i] = d.get(i,0) + 1 
+for k , v in d.items():
+    print(k,':',v) 
+
+
+
+
+d1 = {'namee':'mukesh','ages':23,'places':'patna'}
+d2 = {'namge':'rohit','agsse':25,'placess':'delhi'}
+d2.update({'namge':'rohit sharma'})
+d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
+d3.update({'namhe':'Virat Kohli'})
+d = [d1,d2,d3]
+print(d)
+
+
+
+
+
+import random 
+a = random.randint(000000,999999)
+print(f'{a:06d}')
+
+
+
+
+# fabonacci series 
+
+n = int(input('enter how many no. of fabonacci number : ')) 
+a = 0 
+b = 1 
+for i in range(n+1):
+    print(a)
+    c = a + b 
+    a = b 
+    b = c 
+
+
+
+
+
+
+
+l = [2,56,32,86,32,23,45,67,89] 
+for i in range(len(l)):
+    for j in range(len(l)):
+        if l[i] < l[j]:
+            l[i],l[j] = l[j],l[i] 
+print(l)
+
+
+
+
+
+
+
+prime = []
+for i in range(1,1000):
+    if i > 1:
+        for j in range(2,i):
+            if i % j == 0:
+                break 
+        else:
+            prime.append(i)
+print(prime) 

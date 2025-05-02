@@ -362,12 +362,12 @@
 # d2 = {'namge':'rohit','agsse':25,'placess':'delhi'}
 # d2.update({'namge':'rohit sharma'})
 # d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
+# d3.update({'namhe':'Virat Kohli'})
 # d = [d1,d2,d3]
 # print(d)
 # d3 = {'namhe':'sharma','agesss':30,'placssse':'bihar'} 
 # d3.update({'namhe':'Rohit sharma'})
 # print(d3) 
-
 
 
 
