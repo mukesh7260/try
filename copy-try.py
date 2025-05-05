@@ -804,3 +804,75 @@ for i in range(1,1000):
         else:
             prime.append(i)
 print(prime) 
+
+
+# find character count from the string. 
+
+
+s = 'rohit sharma' 
+d = {}
+for i in s:
+    if i in ' ':
+        continue 
+    elif i in s:
+        d[i] = d.get(i,0) + 1 
+for k , v in d.items():
+    print(f'{k} - {v}')
+
+
+
+ 
+#    one of the best character count or word count program 
+
+
+
+s = 'rohit sharma' 
+d = {}
+for i in s:
+        if i in ' ':
+                continue 
+        elif i in s:
+                d[i] = s.count(i) 
+for k , v in d.items():
+        print(k,':',v) 
+
+                    # or 
+
+
+s = 'rohit sharam'
+d = {}
+for i in s:
+    if i in ' ':
+        continue 
+    elif i in s:
+        d[i] = s.count(i)
+for k , v in d.items():
+    print(f'{k} : {v}')
+
+
+
+    
+
+# number reverse program 
+
+
+n = 5467834
+sum = 0 
+while n > 0:
+    r = n % 10 
+    sum = sum * 10 + r 
+    n = n // 10 
+print(sum) 
+
+
+
+# factorial program of any number 
+
+
+n = 5 
+fact = 1 
+for i in range(1,n+1):
+    fact = fact * i 
+print(fact)
+
+
