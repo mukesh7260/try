@@ -356,7 +356,11 @@
 # a = s[:6] + '*' + s[7:]
 # print(a)
 
-
+# n = int(input("enter number of rows : ")) 
+# for i in range(n+1):
+#     print('  '*(n-i) + ' *  '*i) 
+# for i in range(n-1, -1,-1):
+#     print('  '*(n-i) + ' *  '*i) 
 
 # d1 = {'namee':'mukesh','ages':23,'places':'patna'}
 # d2 = {'namge':'rohit','agsse':25,'placess':'delhi'}
@@ -369,4 +373,63 @@
 # d3.update({'namhe':'Rohit sharma'})
 # print(d3) 
 
+
+# s = 'rohit sharam'
+# d = {}
+# for i in s:
+#     if i in ' ':
+#         continue 
+#     elif i in s:
+#         d[i] = s.count(i)
+# for k , v in d.items():
+#     print(f'{k} : {v}')
+
+
+
+
+
+
+
+
+
+
+
+
+def mukesh(add):
+    def kumar():
+        d = add() 
+        e = d * 1000 
+        return e 
+    return kumar 
+
+@mukesh
+def add():
+    a  = 10 
+    b = 20 
+    c = a + b 
+    return c 
+a = add()
+print(a)
+
+
+
+
+
+
+
+
+# def add(x, y):
+#     return x + y
+# def apply_func(func, a, b):
+#     return func(a, b)
+# print(apply_func(add, 3, 5))
+ 
+
+a =[1, 2, 3, 4, 5]
+b = a
+a[4] = 15
+print(a)
+ 
+
+# [1,2,3,4,15]
 

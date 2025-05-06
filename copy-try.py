@@ -169,7 +169,22 @@ print(t)
 # print(m) 
 
 
+                    # program of decorator only use return statement 
 
+# def mukesh(add):
+#     def kumar():
+#         d = add() 
+#         e = d * 1000 
+#         return e 
+#     return kumar 
+# @mukesh
+# def add():
+#     a = 10 
+#     b = 20 
+#     c = a + b 
+#     return c
+# a = add() 
+# print(a)
 
 
 # s = 'rohit shrama'
@@ -851,7 +866,7 @@ for k , v in d.items():
 
 
 
-    
+
 
 # number reverse program 
 
