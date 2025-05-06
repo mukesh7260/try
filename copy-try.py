@@ -554,9 +554,6 @@ print(b)
 
 
 
-
-
-
 # s = 'Durga Software Solutions'
 # a = s.split()
 # for i in a:
@@ -890,4 +887,126 @@ for i in range(1,n+1):
     fact = fact * i 
 print(fact)
 
+
+
+
+
+a =[1, 2, 3, 4, 5]
+b = a
+a[4] = 15
+print(a)
+ 
+
+
+
+
+#           dynamic list program 
+
+
+n = int(input('enter no. of list : ')) 
+l = [] 
+for i in range(n+1):
+    a = int(input('enter number : ')) 
+    l.append(a) 
+print(l)
+
+
+# Write a Python program to find a list of integers with exactly two occurrences of nineteen and at least three occurrences of five. Return True otherwise False.
+
+
+# Sample list of integers
+nums = [19, 5, 5, 19, 1, 5, 7]
+
+# Count occurrences
+count_19 = nums.count(19)
+count_5 = nums.count(5)
+
+# Check the conditions
+if count_19 == 2 and count_5 >= 3:
+    print(True)
+else:
+    print(False)
+
+
+
+
+
+
+
+# enter dynamic dictionary 
+d = {} 
+n = int(input("enter how many number of dictionary : ")) 
+for i in range(n):
+    a = input("enter key : ")
+    b = input("enter value : ")
+    d[a] = b 
+print(d)
+
+
+
+
+
+
+#  Write a Python program that accepts a list of integers and calculates the length and the fifth element. Return true if the length of the list is 8 and the fifth element occurs thrice in the said list.
+
+
+# Input list
+nums = [19, 19, 15, 5, 5, 5, 1, 2]
+
+# Calculate length
+length = len(nums)
+
+# Get the 5th element (index 4)
+fifth_element = nums[4]
+
+# Count how many times the 5th element occurs
+count_fifth = nums.count(fifth_element)
+
+# Check conditions
+if length == 8 and count_fifth == 3:
+    print(True)
+else:
+    print(False)
+
+
+
+
+
+# Write a Python program to test a list of one hundred integers between 0 and 999, which all differ by ten from one another. Return True otherwise False
+
+
+# Sample list: 0, 10, 20, ..., 990 (100 elements, each differs by 10)
+nums = list(range(0, 1000, 10))
+
+# Check list length
+if len(nums) != 100:
+    print(False)
+else:
+    all_differ_by_ten = True
+    for i in range(99):
+        if nums[i+1] - nums[i] != 10:
+            all_differ_by_ten = False
+            break
+    print(all_differ_by_ten) 
+
+
+
+
+
+# Write a Python program to compute the sum of the ASCII values of the upper-case characters in a given string.
+
+
+# Given string
+text = "Hello WORLD! Python IS Fun"
+
+# Initialize sum
+ascii_sum = 0
+
+# Loop through each character
+for char in text:
+    if char.isupper():
+        ascii_sum += ord(char)
+
+# Print the result
+print("Sum of ASCII values of uppercase characters:", ascii_sum)
 

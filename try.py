@@ -386,50 +386,26 @@
 
 
 
+# def mukesh(add):
+#     def kumar():
+#         d = add() 
+#         e = d * 1000 
+#         return e 
+#     return kumar 
+
+# @mukesh
+# def add():
+#     a  = 10 
+#     b = 20 
+#     c = a + b 
+#     return c 
+# a = add()
+# print(a)
+
+
+#  [19, 19, 5, 5, 5, 5, 5]
 
 
 
-
-
-
-
-
-
-def mukesh(add):
-    def kumar():
-        d = add() 
-        e = d * 1000 
-        return e 
-    return kumar 
-
-@mukesh
-def add():
-    a  = 10 
-    b = 20 
-    c = a + b 
-    return c 
-a = add()
-print(a)
-
-
-
-
-
-
-
-
-# def add(x, y):
-#     return x + y
-# def apply_func(func, a, b):
-#     return func(a, b)
-# print(apply_func(add, 3, 5))
- 
-
-a =[1, 2, 3, 4, 5]
-b = a
-a[4] = 15
-print(a)
- 
-
-# [1,2,3,4,15]
-
+s = ' W3resource Python, Exercises'.split()
+print(s) 
