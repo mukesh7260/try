@@ -403,5 +403,59 @@
 # print(a)
 
 
-# method overloading example in python 
+#  print middle element in the list 
+
+# l = [1,2,3,4,5] 
+# mie_term  = len(l) // 2 
+# print(l[mie_term]) 
+
+
+# a = 15
+# print(a//2)     # print integer value 7.2 . so it take only 7. 
+# print(a/2)      # print float value 
+
+
+
+
+
+
+
+# #   # find 3rd element in the list 
+
+# l = [34, 23, 45, 67, 89, 12, 98, 45, 34, 28, 76]
+
+# # Indexing starts from 0, so 4th element is at index 3
+# count = 0
+# for item in l:
+#     if count == 3:
+#         print("4th element is:", item)
+#         break
+#     count = count + 1 
+
+
+
+
+
+
+# l = [45,34,35,98,87,47,32,94] 
+# count = 0 
+# for i in l:
+#     if count == 5:
+#         print(f'5th element is : {i}') 
+#         break 
+#     count = count + 1
+
+
+
+
+# l = [34,65,47,98,76,23,45,67,89,12,34] 
+# count = 0 
+# for i in l:
+#     if count == 7:
+#         print(f'7th element is : {i}') 
+#         break 
+#     count = count + 1 
+
+
+
 

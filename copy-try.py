@@ -1074,3 +1074,97 @@ m = Mukesh()
 print(m.overloading(2,3,4))
 print(m.overloading(2,3))
 print(m.overloading(2))
+
+
+
+
+
+
+
+
+n = int(input("enter how many number of rows : ")) 
+for i in range(n+1):
+    print('  '*(n-i) + ' *  '*i)
+for i in range(n-1, -1,-1):
+    print('  '*(n-i) + ' *  '*i)
+
+
+
+
+
+
+a = 15 
+print(a//2)     # print integer value 7.2 . so it take only 7.
+print(a/2)      # print float value 
+
+        # find middle element of the list 
+
+
+l = [1,2,3,4,5] 
+mie_term  = len(l) // 2 
+print(l[mie_term]) 
+
+
+
+
+# find 3rd element in the list 
+
+l = [34, 23, 45, 67, 89, 12, 98, 45, 34, 28, 76]
+
+# Indexing starts from 0, so 4th element is at index 3
+count = 0
+for item in l:
+    if count == 3:
+        print("4th element is:", item)
+        break
+    count = count + 1 
+
+
+
+
+
+
+
+#   fid nth element in the list 
+
+
+l = [34, 23, 45, 67, 89, 12, 98, 45, 34, 28, 76]
+n = 4  # Find the 4th element (1-based indexing)
+
+count = 0
+for item in l:
+    count += 1
+    if count == n:
+        print(f"{n}th element is:", item)
+        break
+else:
+    print("Index out of range")
+
+
+
+
+
+
+# fifth element 
+
+
+l = [45,34,35,98,87,47,32,94] 
+count = 0 
+for i in l:
+    if count == 5:
+        print(f'5th element is : {i}') 
+        break 
+    count = count + 1
+
+
+
+
+
+
+n = 65784368
+sum = 0 
+while n > 0:
+    r = n % 10 
+    sum = sum * 10 + r 
+    n = n // 10 
+print(sum)
