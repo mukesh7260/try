@@ -1010,3 +1010,67 @@ for char in text:
 # Print the result
 print("Sum of ASCII values of uppercase characters:", ascii_sum)
 
+
+
+
+# always care that 
+
+a = 10 
+def add():
+    global a 
+    a = 30 
+    return a 
+a = add()
+print(a)
+
+
+
+
+
+s = 'rohit sharma' 
+d = {}
+for i in s:
+    if i in ' ':
+        continue
+    elif i in s:
+        d[i] = s.count(i) 
+for k , v in d.items():
+        print(f'{k} : {v}') 
+
+
+
+# Method overloading example in python 
+
+class Mukesh:
+    def overloading(self,a=None,b=None,c=None):
+        if a != None and b != None and c != None:
+            return a + b + c
+        elif a != None and b != None:
+            return a + b
+        else:
+            return a
+            
+m = Mukesh()
+print(m.overloading(10,20,30))
+print(m.overloading(10,20))
+print(m.overloading(10))  
+
+
+
+
+# or 
+
+
+class Mukesh:
+    def overloading(self, a= None, b = None, c = None):
+        if a!= None and b!= None and c!=None:
+            return a + b + c 
+        elif a != None and b != None :
+            return a + b 
+        else:
+            return a 
+
+m = Mukesh()
+print(m.overloading(2,3,4))
+print(m.overloading(2,3))
+print(m.overloading(2))

@@ -403,9 +403,5 @@
 # print(a)
 
 
-#  [19, 19, 5, 5, 5, 5, 5]
+# method overloading example in python 
 
-
-
-s = ' W3resource Python, Exercises'.split()
-print(s) 

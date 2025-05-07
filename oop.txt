@@ -1,0 +1,1990 @@
+variable access inside the class we use 'self' keyword. & variable access outside the class we make object of that class & write <obj_name>.<class_name>.
+
+
+		Jobma_runserver command 
+python3 manage.py runserver --settings jobma_api.settings.local 
+
+		# sorting alphabet symbol program in python
+s = 'B4A1D3'
+s1=s2=output=''
+for i in s:
+    if i.isalpha():
+        s1 = s1+i 
+    else:
+        s2 = s2+i
+for i in sorted(s1):
+    output = output+i
+for i in sorted(s2):
+    output = output+i
+print(output)
+
+O/P:- 
+ABD134
+
+
+		# sorting letter program in python
+s = 'anjali'
+w = "".join(sorted(s))
+print(w)
+
+O/P:-
+aaijln
+
+		# reverse word program in python 
+
+s = 'Ram Loves Sita Alots Of'
+w = s.split(' ')
+u = [l[::-1] for l in w] 
+v = " ".join(u)
+print(v) 
+
+O/P:- 
+maR sevoL atiS stolA fO
+
+s = 'Ram Loves Sita Alots Of'
+w = " ".join([i[::-1] for i in s.split(' ')])
+print(w) 
+
+O/P:-
+maR sevoL atiS stolA fO
+
+
+s = 'India is great'
+w = s.split()[::-1] 
+print("  ".join(w)) 
+
+       # or 
+
+s = 'India is great' 
+w = s.split()
+l = []
+for i in w:
+    l.insert(0,i)
+print("  ".join(l))
+
+O/P:- 
+great  is  India
+
+		# regular expression program 
+
+import re 
+n = input('entre mobile number ')
+pattern = re.compile("(0|91)?[-\s]?[6-9][0-9]{6}")
+if pattern.match(n):
+    print(f'{n} is valid mobile number ') 
+else:
+    print(f'{n} is not valid mobile number ') 
+
+O/P:- 
+entre mobile number 9876589472
+9876589472 is valid mobile number 
+
+		# to serializer uses in djanog 
+
+How To Use to_representation
+Serializers provide a hook point, called to_representation.
+
+Suppose we want to add a key called admin to serialized data, only when the user is a superuser. For non-superusers, the key admin shouldn’t be present in serialized data.
+
+Our serializer would look like:
+
+class UserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('email', 'first_name', 'last_name')
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        if instance.is_superuser:
+            representation['admin'] = True
+        return representation
+
+		# Multitasking definition : - 
+
+When multiple tasks are executed at a time, then it is called Multi-tasking
+
+		# Multithreading definition : - 
+
+we need more than one thread and when we use more than one thread, it is called multi threading
+
+		# os module directrioes program in python 
+
+import os
+	
+# path
+# path = 'F:/mukesh61/anjali'
+dir1 = 'anjali'
+path1 = 'F:/rikesh'
+path = os.path.join(path1,dir1)
+	
+# Create the directory
+# 'GeeksForGeeks' in
+# '/home / User / Documents'
+try:
+	os.rmdir(path)
+except OSError as error:
+	print(error)
+
+
+import os 
+file = 'F:/mukesh61'
+mk = os.rmdir(file)
+print(mk)
+
+
+		# Python date time program 
+
+from datetime import datetime, timedelta 
+cd = datetime.today()
+bd = datetime.today()-timedelta(days=20)
+ad = datetime.today()+timedelta(days=20)
+print('current date :- ' , cd)
+print('before date from current date :- ' , bd)
+print('after date from current date :- ' , ad) 
+
+O/P:- 
+current date :-  2022-12-09 21:35:15.842194
+before date from current date :-  2022-11-19 21:35:15.842194
+after date from current date :-  2022-12-29 21:35:15.842194 
+
+		# question on dictionary . 
+
+# function to return key for any value
+def get_key(val):
+	for key, value in my_dict.items():
+		if val == value:
+			return key
+
+	return "key doesn't exist"
+
+
+# Driver Code
+my_dict = {"Java": 100, "Python": 112, "C": 11}
+
+print(get_key(100))
+print(get_key(11))
+
+		# find key from values in dictonary. 
+
+d = {'name':'mukesh','city':'bhagalpur'}
+e = list(d.keys())[list(d.values()).index('bhagalpur')]
+print(e)
+
+O/P:- 
+city
+
+		or 
+
+d = {'name':'mukesh','city':'bhagalpur'}
+e = {i for i in d if d[i]=='bhagalpur'} 
+print('value of keys from keys : ' , e) 
+
+O/P:- 
+value of keys from keys : {'city'}
+
+		# command for all version show in requirement.txt 
+
+pip freeze > requirements.txt
+
+		# create list, tuple dictionary & set by user input 
+
+ist = [] 
+sec = []
+n = [int(ist) for ist in input('entre the list element : ').split()] 
+m = [sec for sec in input('entre the list element : ').split()]
+print(n) 
+print(m) 
+
+
+ist = [] 
+n = int(input('entre number of element: ')) 
+for i in range(0,n):
+	ele = int(input('entre number of list by user '))
+	ist.append(ele)
+print(ist) 
+
+
+a = []
+n = int(input('entre no. of element : ')) 
+for i in range(n):
+    a.append(int(input())) 
+# print(a) 
+
+t = tuple(a)
+print('element of touple ', t)
+
+
+a = {} 
+n = int(input('no. of element : ')) 
+for i in range(n):
+    k = input('enter key : ') 
+    v = input('enter value : ') 
+    a.update({k:v}) 
+print(a) 
+
+
+
+a = set()
+n = int(input('enter no. of element : ')) 
+for i in range(n):
+    a.add(input('enter element ')) 
+print(a) 
+
+		# reverse string using for loop 
+
+s = input('entre any string  ')
+e = ''
+for i in s:
+	e = i + s 
+print(e)
+
+O/P: -
+entre any string  rishikesh
+hrishikesh
+
+		# API defintion : - Api is a software interface that allows two application to intract with each other without any user. 
+
+		# REST API : Representatonal state transfer , which take request as a input and return response as a output. 
+
+		# choce field make in django models . 
+
+class MyModel(models.Model):
+    BOOL_CHOICES = ((True, 'Yes'), (False, 'No'))
+
+    attending = models.BooleanField(choices=BOOL_CHOICES)
+
+		# pop():- remove any element in list. & index value remove 
+		# remove(): - remove specify element in once times. 
+		# remove(): - remove funtion gives key error when item is not present in the set. 
+		# discard(): - discard function does not give any error when item is not preset in the 		  set.
+
+		# intersection() : x.intersection(y) OR x&y.
+		# union() : x.union(y) OR x|y.
+		# symmetric_difference() : x.symmetric_difference(y) OR x^y
+		# difference_update() :  Remove the items that exist in both sets:
+		# difference() : The returned set contains items that exist only in the first set, and 		  not in both sets.
+		# symmetric_difference(): Return a set that contains all items from both sets, except 		  items that are present in both sets:
+		# symmetric_difference_update(): Remove the items that are present in both sets, AND 		  insert the items that is not present in both sets:
+		# intersection(): Return a set that contains the items that exist in both set x, and 		  set y:
+		# intersection_update() : Remove the items that is not present in both x and y:
+		# 
+		# some setup create any project fow web developmen in django
+
+1. twilio setup 
+2. gamil setup 
+3. redis setup 
+4. push notification setup using firebox
+5. payment Integration
+6. celery setup 
+7. pillow setup 
+
+		# string reverse using join & reverse method 
+
+s = "mukesh"
+m = list(s)
+m.reverse()
+n = ''.join(m)
+print(n)
+
+O/P:- hsekum
+
+
+
+		# complex password code in python 
+l, u, p, d = 0, 0, 0, 0
+s = input("entre any password  ")
+if (len(s) >= 6) or (len(s)<15):
+	for i in s:
+
+		# counting lowercase alphabets
+		if (i.islower()):
+			l = l + 1
+            		
+
+		# counting uppercase alphabets
+		if (i.isupper()):
+			u = u + 1		
+
+		# counting digits
+		if (i.isdigit()):
+			d = d + 1	
+
+		# counting the mentioned special characters
+		if(i=='@'or i=='$' or i=='_' or i=='#' or i =='=' or i =='<'):
+			p = p + 1	
+if ((l>=1 and l <=10) and (u>=1 and u<=5) and (p>=1 and p<=5) and (d>=1 and d<=5) and l+p+u+d==len(s)):
+	print("Valid Password")
+else:
+	print("Invalid Password !! Password should be at least one lower , one upper , one numberic & one special character ")
+    
+
+
+		# prime no. using function. 
+
+n = int(input('entre any no. !! ')) 
+def prime(n):
+    for i in range(2,n//2):
+        if (n%i) == 0:
+            print('no. is not prime')  
+            break 
+    else:
+        print('no. is prime ')
+    return n 
+prime(n) 
+
+O/P:- entre any no. !! 17
+no. is prime 
+
+		# palindrom no. using funtion. 
+
+n = int(input("entre any number !! "))
+def pri(n):
+    s = n
+    sum = 0 
+    while n > 0:
+        r = n % 10 
+        sum = sum *10 +r 
+        n = n // 10 
+    if sum == s:
+        print('no. is plaindrom')
+    else: 
+        print('no. is not plaindrom ') 
+    return f'{s}' 
+print(pri(n)
+
+O/P:- entre any number !! 141
+no. is plaindrom
+141
+
+		# diamond print using function.
+
+n = int(input('entre no. of rows !!! ')) 
+def pat(n):
+    for i in range(n):
+        print("  "*(n-i)+" *  "*i) 
+    for i in range(n-2,-1,-1):
+        print("  "*(n-i)+" *  "*i) 
+    return n 
+pat(n)
+ 
+O/P:- 
+
+               *  
+             *   *  
+           *   *   *          
+         *   *   *   *        
+       *   *   *   *   *      
+     *   *   *   *   *   *    
+   *   *   *   *   *   *   *  
+     *   *   *   *   *   *    
+       *   *   *   *   *      
+         *   *   *   *        
+           *   *   *          
+             *   *
+               *
+
+		# funtion using factorial program .
+
+n = int(input('entre any number !! ')) 
+def fac(n):
+    if n == 0 or n == 1:
+        return 1 
+    else:
+        return n * fac(n-1) 
+print(fac(n))
+
+O/P:-entre any number !! 7
+5040
+
+		# decarotaor function example. 
+
+def decorateFun(func):
+    def sumOfSquare(x,y):
+        return func(x**2,y**2)
+    return sumOfSquare 
+
+@decorateFun
+def add(a,b):
+    c = a + b 
+    return c 
+
+c = add(16,7)
+print('addintion of two no. ', c )
+
+O/P:- addintion of two no.  305
+
+		# vowel count from string 
+
+ip_str = input("Enter a string: ").lower()
+count = {x:sum([1 for char in ip_str if char == x]) for x in 'aeiou'}
+print(count)
+
+O/P:- Enter a string: anjali
+{'a': 2, 'e': 0, 'i': 1, 'o': 0, 'u': 0}
+
+		or 
+
+sec = input('entre any string  ').lower()
+l = ['a','e','i','o','u']
+count = 0
+for c in sec:
+    if c in l:
+        count = count+1
+print(count)
+
+O/P:-
+entre any string  mukesh
+2
+
+		# celery definition : - when a task is ready to run celery puts on a queue , a list of task that are ready to run. 
+
+		#PEP : - python enchanment proposol
+
+		# two list converted into dictionary 
+
+l1 = [101,102,103,104,105] 
+l2 = ['mukesh','kumar','anjali','kumari','vikash']
+
+d = zip(l1,l2)
+print(dict(d)) 
+
+O/P: -
+ 
+{101: 'mukesh', 102: 'kumar', 103: 'anjali', 104: 'kumari', 105: 'vikash'}
+
+		# no. of word count in string
+def first_non_repeating(str_r):
+    dict = {}
+    size = len(str_r)
+    for i in range(size):
+        key = str_r[i]
+        if key not in dict:
+            dict[key]=1
+        else:
+            dict[key]=dict[key]+1
+    print(dict)
+first_non_repeating('NETSETTOSNET')
+
+O/P:- {'N': 2, 'E': 3, 'T': 4, 'S': 2, 'O': 1}
+
+		# no. of word count in string 
+
+s = list('mukeshmukesh')
+u=s.count('m')
+print(u)
+
+O/P:- 2
+
+		# join method work list , touple and dictionary 
+
+l = ['12','14','16']
+sep = '@'
+u=sep.join(l)
+print(u)
+
+O/P: 
+12@14@16
+
+t = ('amit','mukesh','anjali') 
+sep = '$'
+u = sep.join(t)
+print(u) 
+
+O/P- 
+amit$mukesh$anjali
+
+d = {'name':'mukesh','city':'gurugram'} 
+sep = '#'
+u = sep.join(d)
+print(u) 
+
+O/P:- 
+name#city
+	
+		# dictionary me touple update karna.
+
+d = {'name':'mukesh','city':'gurugram'} 
+l = (('anjali','kumari'),)
+d.update(l)
+print(d) 
+
+O/P:- {'name': 'mukesh', 'city': 'gurugram', 'anjali': 'kumari'} 
+
+			or 
+
+d = {'name':'mukesh','city':'gurugram'} 
+l = (('anjali','kumari'),('city','delhi'))
+d.update(l)
+print(d) 
+
+O/P:- {'name': 'mukesh', 'city': 'delhi', 'anjali': 'kumari'}
+
+
+
+
+		# dictionary me list ko update karan. 
+
+d = {'name':'mukesh','city':'gurugram'} 
+l = ['anjali','kumari'] 
+d.update([l])
+print(d)
+
+O/P:- {'name': 'mukesh', 'city': 'gurugram', 'anjali': 'kumari'}
+
+
+
+		# duplicate value remove from two methods 
+		1.using set method 
+
+l = [12,12,13,13,2,3,3,4,5,67,87,34]
+s = set(l)
+print(list(s)) 
+
+		2. using dictionary method 
+dict1 = {
+    'car': ['ford','toyota','ford','toyota'],
+    'brand': ['mustang','ranz','mustang','ranz']
+}
+
+dict2 = {}
+for key, value in dict1.items():
+    dict2[key]=set(value)
+print(dict2) 
+
+		# update dictionary from three method 
+
+
+Ist method 
+
+d1 = {'name': 'mukesh'}
+d2 = {'city': 'gurugram'}
+
+# d1.update(d2)
+# print(d2) 
+
+2nd method 
+
+d3 = {**d1,**d2}
+print(d3) 
+
+O/P:- {'name': 'mukesh', 'city': 'gurugram'}
+
+3rd method 
+
+d = {'name':'mukesh','city':'gurugram'}
+d['branch'] = 'cse'
+print(d) 
+
+
+O/P:- {'name': 'mukesh', 'city': 'gurugram', 'branch': 'cse'}
+
+
+
+		# syntax of lambda function 
+  variable_name = lambda <argument> : output 
+
+		# check email valid or not in python 
+
+import re 
+def isValidEmail(email):
+    regex = "^[A-Z0-9.%+-]+@[A-Z0-9]+\.[A-Z]{2,}$"
+    if len(email)>7:
+        if re.match(regex, email, re.IGNORECASE) is not None:
+            return True 
+if isValidEmail('mukeshcse61@gmail.com'):
+    print("valid email addaress")
+else:
+    print('Invalid email addaress ')
+
+O/P:- 
+valid email addaress
+
+		# no. of words count in sentences. 
+n = input('entre any string ')
+print(len(n.split()))
+O/P:- 
+entre any string mukesh write a letter 
+4
+
+		# duplicate value print in set 
+l = [12,23,12,34,23,24]
+print(set([x for x in l if l.count(x)>1])) 
+
+O/P:- {12, 23}
+
+		# febonaccie series example. using function method.
+
+n = int(input('entre no. of  fabonacci series ')) 
+def feb(n):
+    if n == 0:
+        return 0
+    elif n ==1:
+        return 1 
+    else:
+        return feb(n-1)+feb(n-2)
+for i in range(0,n+1):
+    print(feb(i))
+
+		
+		 # prime number example b/w two range. 
+
+for num in range(100,200):
+    if all(num % i !=0 for i in range(2,num)):
+        print(num,end=" ")
+O/P:- 101 103 107 109 113 127 131 137 139 149 151 157 163 167 173 179 181 191 193 197 199 
+
+
+
+
+			
+			# dictionary value sorted 
+d = {51:'mukesh',12:'gurugram',54:161}
+dict = sorted(d.keys())
+print(dict)
+
+O/P:- {12,51,54}
+
+
+			# list difference 
+l1 = set([1,2,3])
+l2 = set([1,2])
+
+s = l1.difference(l2)
+print(list(s))
+
+O/P:- [3]
+
+			# method overloading example 
+
+class Myclass:
+	def sum(self, a=None, b=None, c=None):
+		if a!=None and b!=None and c!=None:
+			s = a + b + c
+		elif a!=None and b!=None:
+			s = a + b
+		else:
+			s = 'Provide at least Two Numbers'
+		return s
+		
+obj = Myclass()
+print(obj.sum(10, 20,30))
+print(obj.sum(25,15))
+
+		# method overriding example
+
+class Animal:
+    def Walk(self):
+        print('Hello, I am the parent class')
+
+class Dog(Animal):
+    def Walk(self):
+        print('Hello, I am the child class')
+        
+print('The method Walk here is overridden in the code')
+
+#Invoking Child class through object r
+
+r = Dog()
+r.Walk()
+
+#Invoking Parent class through object r
+
+r = Animal()
+r.Walk()
+                                      
+			#  opps concept using constructor 
+
+class Mobile:
+	def __init__(self, m):
+		self.model = m
+		
+	def show_model(self, p):
+		price = p
+		print("Model:", self.model, "and Price:", price)
+
+realme = Mobile('Redmi_10')
+realme.show_model(10000)
+print(id(realme))
+
+realme1 = Mobile('RealMe X')
+realme1.show_model(1000)
+print(id(realme1))
+
+redmi = Mobile('Redmi 7s')
+redmi.show_model(2000)
+print(id(redmi))
+
+geek = Mobile('Python')
+geek.show_model(49)
+print(id(geek))
+
+
+
+                                                                                     	
+			# palindrom number code . 
+
+n = int(input("entre any number "))
+s=n
+sum = 0
+while(n>0):
+    r = n%10
+    sum = sum*10+r
+    n = n//10
+if sum == s:
+    print('no. is palindrom ')
+else:
+    print("no is not palindrom ")
+
+
+
+				# polymerphism example
+
+
+class Bird:
+    def intro(self):
+        print("this is word intro")
+    def flight(self):
+        print('bird can fly')
+class sparrow(Bird):
+    def intro(self):
+        print("this is sparrow intro")
+    def flight(self):
+        print('sparrow can flight in the sky')
+class crow(Bird):
+    def intro(self):
+        print("this is crow intro")
+    def flight(self):
+        print('some crow can flight but some can not ')
+b = Bird()
+s = sparrow()
+c = crow()
+b.intro()
+b.flight()
+s.intro()
+s.flight()
+c.intro()
+c.flight()
+
+					# polymerphism example 2
+class India:
+    def captial(self):
+        print("delhi is captical of india ")
+
+    def language(self):
+        print("hindi speak in india only but english speak anywhere in the world ")
+
+class Usa:
+    def captial(self):
+        print("washington is the captical of USA ")
+
+    def language(self):
+        print("In usa speak language ") 
+
+I = India()
+U = Usa()
+I.captial()
+I.language()
+U.captial()
+U.language()
+
+
+
+        				# inheritance example
+
+class Computer:
+    def write(self):
+        print("write on notepad")
+class hp(Computer):
+    def pen(self):
+        print('write on copy')
+h = hp()
+h.write()
+h.pen()
+
+					# single inheritanace exaample
+
+class India:
+    def captial(self):
+        print("delhi is captical of india ")
+
+    def language(self):
+        print("hindi speak in india only but english speak anywhere in the world ")
+
+    def father(self):
+        print("India is fathor of pakistan ") 
+
+class Pakistan(India):
+    def captial(self):
+        print("washington is the captical of USA ")
+
+    def language(self):
+        print("In usa speak language ") 
+
+    def son(self):
+        print("pakistan is son of india ")
+
+I = India()
+p = Pakistan()
+p.son()
+p.father()
+
+				        # multiple inheritance example
+
+class Mother:
+    def mother(self):
+        print("maa is the best in the world for matritiv property ")
+
+class Father:
+    def father(self):
+        print("father is the best in the world for improvement own son ")
+
+class Son(Mother, Father):
+    def son(self):
+        print("son is responsibility of serve own parent ") 
+
+s = Son()
+s.mother()
+s.father()
+s.son()
+
+					# fabonacci series example
+
+
+
+n = int(input("entre any number "))
+def fib(n):
+    a = 0
+    b = 1
+    sum = 0
+    if n == 1:
+        print(b)
+    else:
+        for i in range(0,n):
+            print(a) 
+            sum = sum + a 
+            c = a+b
+            a = b
+            b = c 
+        print("sum of fabonacci series ", sum)
+
+fib(n) 
+
+					# fabonacci series example 2
+
+
+n = int(input('entre no. of fabonacci series  ')) 
+a = 0 
+b = 1 
+sum = 0 
+for i in range(0,n):
+    c = a + b  
+    print(a)   
+    sum = sum + a 
+    a = b 
+    b = c      
+print(f'sum of fabonacci series {sum}')
+
+					# Arm strong number 
+n=int(input("Enter any number "))
+a=n
+s=0
+while(n>0):
+     r=n%10
+     s=s+r**3
+     n=n//10
+if(s==a):
+    print("Number is armstrong ")
+else:
+    print("Number is not armsstrong ")
+
+					# Factorial program 
+n=int(input("Enter any number "))
+fact=1
+if(n==0) or (n==1):
+    print(" factorial of number is  1")
+else:
+    for i in range(1,n+1):
+        fact=fact*i
+print("Factorial of given number is ", fact)
+
+					# Reverse no. program 
+n=int(input("Entre any number "))
+temp=n
+rev=0
+while n>0:
+    r=n%10
+    rev=(rev*10)+r
+    n=n//10
+print("Reverse no. of that no. " , rev)
+
+					# terinury operator in python
+a, b, c = 10, 20, 50
+max = a if a>b>c else b if b>c else c
+print(max)
+
+
+
+					# prime no. example 
+
+
+n = int(input("entre any number "))
+if n>1:
+    for i in range(2, int(n/2)+1):
+        if n%i ==0:
+            print("no. is not prime", n)
+            break
+    else:
+        print(n, "is a prime number")
+else:
+            print("no. is not prime",n) 
+
+					# method 2 prime no.
+
+from primePy import primes			# pip install primePy packeage 
+print(primes.check(63)) 
+
+					# method 3 prime no.best method 
+
+n=int(input("Enter a number:"))
+if n>1:
+    for i in range(2,n//2):
+        if(n%i)==0:
+            print(n,"is not a prime number")
+            break
+    else:
+        print(n,"is a prime number")
+else:
+    print(n,"is neither prime nor composite")
+
+					# method 4 prime no. 
+n = int(input("entre any number "))
+def prime(n):
+    if n>1:
+        for i in range(2,n):
+            if n % i ==0:
+                return False
+            return True
+    else:
+        return False
+print(prime(n))
+
+					# Swapping program 
+
+a = 10
+b = 23
+print("swaping value before ", a,b )
+c = a
+a = b 
+b = c 
+print("swaping value after ", a,b)
+
+					
+
+					# print Factorial program
+
+n = int(input("entre any number "))
+fact = 1
+if n ==0 or n ==1:
+    print("factorial of no. is ", 1)
+else:
+    for i in range(2,n+1):
+        fact = fact*i
+    print("factorial of no.",n ,"=", fact)
+
+
+				# nested list access element
+
+l = [[1,2,4],[5,6,7],[8,9,3]]
+for list in l:
+    for list2 in list:
+        print(l[1][0])
+
+				# function calling add two number program
+
+def add(a,b):
+    sum = a+b
+    return sum
+n = int(input("entre any number "))
+m = int(input("entre second number "))
+print('sum of two number' , n, '&' ,m  , add(n,m))
+
+					# GIT BRANCH CODE 
+ 	sudo git branch branchname
+	sudo git checkout -b <branchname>
+	sudo git status
+	sudo git add employer_api/jobma_api/v7/views.py
+	sudo git commit -m "space updated"
+	sudo git push origin <branchname>
+	open browser link
+	sudo git pull origin master
+	sudo git stach or sudo git stach pop - > delete for changeble code.
+	sudo git clone <branch_link>
+		
+
+
+				# compression list
+
+l = [i  for i in range(20)]	# compression list example.
+
+l = [[i for i in range(4)]  for j in range(4) ]
+print(l)
+
+r = int(input('entre no. of rows '))
+c = int(input('entre no. of column '))
+l = [[i for i in range(r)]  for j in range(c)]
+print(l)
+
+a = list([[i for i in range(4)] for j in range(3)])
+print(a)
+
+
+				# Lambda example in python
+
+l = lambda a,b: a if a>b  else b
+print(l(6,8))
+
+result = lambda x : f"{x} is even" if x %2==0 else f"{x} is odd"
+print(result(int(input('entre any number '))))
+
+				# duplicate value remove from list
+
+l = [ 1,2,43,2,54,43,67,12,34,43,898]
+s= [*set(l)]
+print(s)
+
+			or 
+
+from collections import OrderedDict
+l = [ 1,2,43,2,54,43,67,12,34,43,898]
+# s= [*set(l)]
+res = list(OrderedDict.fromkeys(l))
+print(res)
+
+				# serializer concept 
+
+from django.contrib.auth import authenticate
+from rest_framework import serializers, exceptions
+
+
+class LoginUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserModel
+        fields = ('username', 'password')
+
+    def validate(self, data):
+        user = authenticate(**data)
+        if user:
+            if user.is_active:
+                return user
+            raise exceptions.AuthenticationFailed('Account is not activated')
+        raise exceptions.AuthenticationFailed()
+
+
+CREATE TABLE `mytable` ( 
+`id` INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+`created` TIMESTAMP DEFAULT '0000-00-00 00:00:00', 
+`updated` TIMESTAMP DEFAULT now() ON UPDATE now(),
+`myfield` VARCHAR(255)
+); 
+
+
+			# GIT COMMAND.	
+git config --global user.name "entre name"
+git config --global user.email " entre your mail"
+git status
+mkdir mukesh
+git init
+git add main.c
+git status
+git commit -m "save the file"
+git status
+git remote add origin  " https//github.com____________"
+git push origin master
+git commit -m "second times save file"
+git clone  "https://github.com________" git clone command used in folder. 
+git pull origin master
+git branch <branch_name> 	# create new branch
+git branch 	# tell about total branch in git
+git checkout <branch_name> 		# switch to new branch
+git branch -D <branch_name>		# delete branch name
+
+		example: -
+git branch hello
+git checkout hello
+touch random.c
+git add random.c
+git commit -m " added random faile in hello branch"
+git push origin hello
+sudo nano main.c
+git add main.c
+git commit -m "modified file of main.c"
+git push origin hello
+		example end
+
+
+		# these command used after.
+git log 			
+git stash
+git revert
+git diff
+git merge
+git rebase
+git fetch
+git reset
+
+
+			# dictionary value update
+	d = {"name": "mukesh"}
+	print(d)
+	d1 = {"name":"priya"}
+	d.update(d1)
+	print(d)
+
+
+			# virtual enviroment in windows
+pip install virtualenv 
+$ cd Desktop
+$ mkdir myproject
+$ cd myproject 
+pip install virtualenv
+$ virtualenv env
+$ cd env
+$ Scripts\activate.bat
+$ pip install django
+
+			# logout api
+
+ 
+class LogoutApiview(APIView):	
+	def post(self, request, format = None):
+		try:
+			refresh_token = request.data.get('refresh_token')
+			token_obj = RefreshToken(refresh_token)
+			token_obj.blacklist()
+			return Response(status = status.HTTP_200_OK)
+		except Exception as e:
+			return Response(status = status.HTTP_400_BAD_REQUEST)
+
+
+					# list important program
+
+l = [10,20,30,40,50]
+m  = []
+s = l.copy()
+print(s)
+m = s
+m.append(67)
+print(m) 
+
+					# compression dict. example
+
+myDict = {x: x**2 for x in [1,2,3,4,5]}
+print (myDict)
+
+
+l = [12,42,53,55,65,31]
+d = {k: k for k in l}
+print(d)
+
+newdict = {x: x**3 for x in range(10) if x**3 % 4 == 0}
+print(newdict)
+
+				# git command step
+1. add
+2. commit
+3. push
+
+				# abstract method example
+
+from abc import ABC, abstractmethod
+class DefenceForce(ABC):
+	@abstractmethod
+	def area(self):
+		pass
+	def gun(self):
+		print("gun = AK47")
+class Army(DefenceForce):
+	def area(self):
+		print("Army Area = Land")
+class AirForce(DefenceForce):
+	def area(self):
+		print("AirForce Area = Sky")
+class Navy(DefenceForce):
+	def area(self):
+		print("NavyForce = See")
+a = Army()
+af = AirForce()
+n = Navy()
+a.area()
+a.gun()
+	
+		# encapulation example of python
+
+class Super:
+	def __init__(self):
+		self._value1 = 100	#protected member
+		self.__value2 = 200	#private member
+		self.value3 =  300  	# public member
+	def display(self):
+		print(self._value1)
+		print(self.__value2)
+class Sub(Super):
+	def show(self):
+		print(self._value1)
+		print(self.__value2)
+
+ob = Sub()
+ob.show()
+
+# ob1 =Super()
+# ob1.display()
+
+
+		# inheritance example
+class Math:
+	def area(self, l, b):
+		self.a = l
+		self.b1 = b 
+		c = l * b
+		print("area of rectangle is " , c) 
+
+class Physics(Math):
+	def calcuate(self, l,b):
+		self.a = l
+		self. b1 = b
+		p = 2*(l+b)
+		print("perimeter of rectangel is " , p)
+
+py = Physics()
+py.calcuate(10,15)
+py.area(10,15)
+
+
+			# filter function example:
+
+l = [10,11,23,14,24,25,43,56,87,26]
+def no(l):
+    if l>50:
+        return True
+    else:
+        return False  
+amr = list(filter(no,l))
+print(amr)
+
+O/P:-
+[56, 87]
+
+		or 
+def no(l):
+    return l%2==0
+number = (1,2,3,4,5)
+d = filter(no,number)
+print(list(d))
+
+O/P:-[2, 4]
+			# map function example:
+
+l = [ 10,23,31,24,35,54,36,28,55]
+def no(l):
+    return l+2
+mk = list(map(no,l))
+print(mk)
+
+O/P:- 
+[12, 25, 33, 26, 37, 56, 38, 30, 57]
+
+		or 
+
+def no(l):
+    return l + l 
+number = (1,2,3,4,5)
+d = map(no,number)
+print(list(d))
+
+O/P:-[2, 4, 6, 8, 10]
+
+			# reduce function example: 
+
+from functools import reduce
+l = [12,24,35,35,31]
+def add(x,y):
+    return x+y 
+mk = reduce(add,l)
+print(mk)
+
+O/P:-
+137
+
+			# lambda function example : 
+# x = lambda a : a if a % 5 ==0 else None
+# print(x(500))
+
+
+# x = lambda a: a+23
+# print(x(2))
+
+# x = lambda a,b,c : a+b+c 
+# print(x(2,3,5))
+
+# l = lambda a,b: a*b
+# print(l(3,5))
+				# sum of list value:-
+
+l = [12,23,34,26,47]
+d = sum(l)
+print(d)
+				# list use with touple: 
+a = [10, 20, (30,40)]
+print("Original List A:", a)
+print(id(a))
+print()
+# Appending a new Tuple
+a.append((50, 60))
+print("After Appending a tuple A:",a)
+print(id(a))
+
+O/P:-
+Original List A: [10, 20, (30, 40)]
+2196154693056
+
+After Appending a tuple A: [10, 20, (30, 40), (50, 60)]
+2196154693056
+				# touple use with list:-
+
+a = ([10, 20], [30,40])
+
+print("Original Tuple A:", a)
+print(id(a))
+print()
+
+# Modifying List
+a[0][0] = 80
+print("After Modification:",a)
+print(id(a))
+
+O/P:-
+Original Tuple A: ([10, 20], [30, 40])
+1125190454976
+
+After Modification: ([80, 20], [30, 40])
+1125190454976
+
+			# Converting Lists into Dictionary:-
+
+
+roll = [101, 102, 103]
+name = ['Rahul', 'Raj', 'Sonam']
+
+# make a dictionary
+z = zip(roll, name)
+d = dict(z)
+print(d)
+
+O/P:-
+
+{101: 'Rahul', 102: 'Raj', 103: 'Sonam'}
+
+			# Getting input from user
+
+# Creating Empty Dict
+a = {}
+
+n = int(input("Number of Elements: "))
+
+for i in range(n):
+	k = input("Enter Key: ")
+	v = input("Enter Value: ")
+	a.update({k:v})
+	
+print(a)
+
+			# Passing Set to Function
+def show(s):
+	print(s)
+	print(type(s))
+	for i in s:
+		print(i)
+
+st = {10, 20, 30, 'GeekyShows'}
+show(st)
+O/P:-
+
+{'GeekyShows', 10, 20, 30}
+
+<class 'set'>
+GeekyShows   
+10
+20
+30
+
+name = 'mukesh'
+age = 25
+gf = 'priya'
+fig = '32'
+print(f"my name is {name} \n my age is {age} \n my gf name is {gf} \n my gf fig is {fig}")
+
+O/P:-
+my name is mukesh    
+ my age is 25        
+ my gf name is priya 
+ my gf fig is 32     
+		# class example. 
+class Cat:
+    def speak(self):
+        a =  "mayun mayun ......."
+        print(a)
+        return a
+
+c = Cat()
+print(f"cat speak {c.speak()}") 
+
+O/P:-
+mayun mayun .......
+cat speak mayun mayun .......
+					# random module in python
+import random 
+print(random.random())
+        
+o/p:-
+0.2417394957506559
+
+import random 
+print(random.choice('mukesh'))
+o/p:-
+m or u or k or e.
+
+import random 
+print(random.randrange(10000,99999))
+
+o/p:-
+87021
+
+import random 
+print(random.randint(10000,99999))
+
+o/p:-
+46688
+
+import random 
+print(random.randrange(10,150,5))
+o/p:-
+85
+
+import random         
+mylist = ["apple", "banana", "cherry"]
+random.shuffle(mylist)
+print(mylist)
+o/P:-
+['banana', 'apple', 'cherry']
+['cherry', 'banana', 'apple']
+
+				# example of nested dictionary using list
+d = {'quote' : '1234',
+     'Date': '2019-03-31',
+     'Items': [{'LineNumber': 1,'PartNumer': 'ABC',
+     'Description': 'very good','Price': 123.45},
+     {'LineNumber': 2, 'PartNumer': 'XYZ',
+     'Description': 'Not very good', 'Price': 678.9}]}
+
+print(d)   
+
+				#####  orm query 
+
+query = Person.object.raw('select * from A full outer join B,C,D,E,F on A.common_filed_name = B.common_field_name,
+                           'A.common_filed_name = C.common_field_name','A.common_filed_name = D.common_field_name',
+                           'A.common_filed_name = E.common_field_name','A.common_filed_name = F.common_field_name'
+
+			#  arm strong no. b/w two range 
+
+lower = int(input('entre first no. '))
+upper = int(input('entre second  no. '))
+
+for num in range(lower, upper + 1):
+    sum = 0
+    temp = num
+    while temp > 0:
+        r = temp % 10
+        sum += r ** 3
+        temp //= 10
+    if num == sum:
+        print(num)  
+
+			# list convert into dict. 
+
+l1=['a','b','c','d']
+d1=dict(enumerate(l1))
+print(d1)
+
+O/P:- {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+
+l = ['mk','rk','ak','pk']
+s = {k:'m' for k in l}
+print(s)
+
+O/P:- {'mk': 'm', 'rk': 'm', 'ak': 'm', 'pk': 'm'}
+
+l = [12,14,141,121,34,25,46,57,78]
+d = dict.fromkeys(l,'key')
+print(d)
+
+O/P:- {12: 'key', 14: 'key', 141: 'key', 121: 'key', 34: 'key', 25: 'key', 46: 'key', 57: 'key', 78: 'key'}
+
+			# dict convert into list. 
+  # method 1.
+dict = { 'Geeks': 10, 'for': 12, 'Geek': 31 }
+ 
+# Converting into list of tuple
+list = [(k, v) for k, v in dict.items()]
+ 
+# Printing list of tuple
+print(list)
+
+	# method 2
+dict = { 'Geeks': 10, 'for': 12, 'Geek': 31 }
+ 
+# Converting dict into list of tuple
+list = list(dict.items())
+ 
+# Printing list of tuple
+print(list)
+		
+	# method 3		
+
+nm = { 'Geeks': 10, 'for': 12, 'Geek': 31 }
+ 
+# Using zip
+listt = zip(nm.keys(), nm.values())
+ 
+# Converting from zip object to list object
+listt1 = list(listt)
+ 
+# Printing list
+print(listt1)
+
+	# method 4
+
+dict = { 'Geeks': 10, 'for': 12, 'Geek': 31 }
+ 
+# Initialization of empty list
+list = []
+ 
+# Iteration
+for i in dict:
+   k = (i, dict[i])
+   list.append(k)
+ 
+# Printing list
+print(list)
+
+	# method 5
+
+dict = { 'Geeks': 10, 'for': 12, 'Geek': 31 }
+ 
+k = list(dict.keys())
+l = list(dict.values())
+# Converting into list of tuple
+list1 = map( lambda a: (k[a], l[a]) , range(len(dict)))
+ 
+# Printing list of tuple
+print('list is ', [*list1])
+
+			# Validation Serialization.
+
+from rest_framework import serializers
+class StudentSerializer(serializers.Serializer):
+	name = serializers.CharField(max_length=100)
+	roll = serializers.IntegerField()
+	city = serializers.CharField(max_length=100)
+	def  validate(self, data):
+		nm = data.get(‘name’)
+		ct = data.get(‘city’)
+		if nm.lower() == ‘rohit’ and ct.lower() != ‘ranchi’ :
+			raise serializers.ValidationError(‘City must be Ranchi’)
+		return data	 
+
+
+			# serializers 
+
+
+from django import forms
+class School(forms.Form):
+    name = forms.CharField()
+    age = forms.IntegerField() 
+    city = forms.CharField()
+    branch = forms.CharField() 
+
+
+from django.db import models
+class Student(models.Model):
+    name = models.CharField()
+    city = models.CharField()
+    branch = models.CharField()
+    roll = models.IntegerField() 
+
+
+from rest_framework import serializers
+from django.contrib.auth.models import models 
+class StudentSerializers(serializers.Serializer):
+    name = serializers.CharField()
+    city = serializers.CharField()
+    branch = serializers.CharField()
+    roll = serializers.IntegerField()
+    otp = serializers.IntegerField()
+    email = serializers.EmailField() 
+
+
+    def validate(self, attrs):
+        nm = attrs.get['names']
+        if nm != 'mukesh':
+            raise serializers.ValidationError('pls entre name mukesh ')
+        return attrs
+
+    def validate(self, attrs):
+        ot = attrs.get['otp'] 
+        if ot.is_valid(serializers.ValidationError('invalid otp ! pls write correct opt ')):
+            ot.save()
+        return attrs 
+
+    def validate(self, attrs):
+        email1 = attrs.get['email']
+        if email1.is_valid(serializers.ValidationError('invalid email !! pls witre correct email ')):
+            email1.save() 
+        return attrs 
+
+
+from rest_framework import serializers
+class CollegeSerializer(serializers.serializer):
+	name = serializers.CharField()
+	roll = serializers.IntegerField()
+	branch = serializers.CharField()
+
+	def validate(self,attrs):
+		name = attrs['name']
+		roll = attrs['roll']
+		if name.is_valid(serializers.ValidationError('invalid name !! pls correct name ')):
+			name.save() 
+		if roll.is_valid(serializers.ValidationError('invalid roll !! pls correct roll number ')):
+			roll.save()
+		return attrs 
+		
+		# vowel & consonant print in string 
+
+s = input('entre any string ') 
+l = ['a','e','i','o','u']
+count = 0 
+const = 0 
+for i in s:
+	if i in l:
+		count = count + 1 
+		print('no. of vowel of string ', + count) 
+
+	if i not in l:
+		const = const + 1 
+		print('no. of const in string ', + const)
+
+		# example of generator function
+
+
+n = int(input('entre ist no ')) 
+m = int(input('entre 2nd no. ')) 
+
+def show(n,m):
+    while n<=m:
+        yield n
+        n = n + 1
+    
+        
+result = show(n,m)
+# print(next(result)) 
+for i in result:
+    print(i) 
+
+O/P:- 
+1
+2
+3
+4
+5
+6
+
+    #    or 
+
+
+
+n = int(input('entre ist no ')) 
+m = int(input('entre 2nd no. ')) 
+
+def show(n,m):
+    while n<=m:
+        yield n
+        n = n + 1
+    
+        
+result = show(n,m)
+print(next(result)) 
+for i in result:
+    print(i) 
+
+O/P:
+1
+2
+3
+4
+5
+6
+
+		# decorator example 
+
+
+def neha(nupur):
+    def anisha():
+        h = nupur()
+        i = h // 1000
+        return i 
+    return anisha
+
+def anjali(nupur):
+    def sah():
+        f = nupur()
+        g = f * 100
+        return g 
+    return sah 
+
+def muk(nupur):
+    def kum():
+        d = nupur()
+        e = d * 10 
+        return e 
+    return kum 
+
+@neha
+@anjali
+@muk 
+def nupur():
+    a = int(input('entre first  number ')) 
+    b = int(input('entre second number '))
+    c = a * b 
+    return c 
+    
+print(nupur())
+
+O/P:- 
+
+entre first  number 5
+entre second number 2
+10
+
+		# dictionary iteration 
+
+t = {'name':'mukesh','kumar':'cse','city': 'gurugram'}
+for i in t:
+     print("%s : %s" %(i, t[i])) 
+
+O/P:- 
+name : mukesh
+kumar : cse    
+city : gurugram
+
+		# touple iteration using for loop & dictionary 
+
+tup = ('a', 'b', 'c', 'd', 'e') 
+tup_iter = iter(tup)
+print("Inside loop:")
+for index, item in enumerate(tup_iter):
+    print(item)
+    if index == 2:
+        break
+
+print("Outside loop:")
+print(next(tup_iter))
+print(next(tup_iter)) 
+
+O/P : -
+Inside loop:
+a
+b
+c
+Outside loop:
+d
+e
+		# list slice 
+s = 'rishikesh'
+print(s[::-3]) 
+print(s[-7:-2])
+print(s[-9:-4:3])
+print(s[:-2])  
+
+O/P: 
+
+hks
+shike  
+rh     
+rishike
+
+		# nested class example in python 
+
+class College:
+    def __init__(self):
+        self.cse = "computer "
+        self.mechanical = 'mechanical '
+        self.civil = 'civil'
+        self.eee = 'EEE'
+        self.li = self.Library()
+
+    def show(self):
+        print("------------  Department of college -------------------------")
+        print('computer department ', self.cse)
+        print('mechanical_deapartment ', self.mechanical)
+        print('civil_department ', self.civil)
+        print('electrical_deapartment ', self.eee)
+
+    class Library:
+        def __init__(self):
+            self.book = 'math'
+            self.play = 'cricket'
+            self.me = 'mechanics'
+            self.ee = 'basic_electronics'
+
+        def shows(self):
+            print("----------------- Library of college LNJPIT --------------------") 
+            print('book', self.book)
+            print('play', self.play) 
+            print('me', self.me)
+            print('eee',self.ee) 
+
+co = College()
+co.show()
+a = co.li	# object  of Library class 
+a.shows()
+print(a.book)
+
+O/p: 
+
+------------  Department of college -------------------------
+computer department  computer 
+mechanical_deapartment  mechanical 
+civil_department  civil
+electrical_deapartment  EEE
+----------------- Library of college LNJPIT --------------------
+book math
+play cricket
+me mechanics
+eee basic_electronics
+math
+
+
+		# class method variable access 
+
+class Lnjpit:
+	branch = ['cse','mechanical','electrical','civil'] 
+	por = ['shambhu','sudhir','suryakant','shushil','sham_tabrej']
+	@classmethod
+	def show(cls):
+		print('banch : -  ',    cls.branch)
+		print('professor : - ', cls.por) 
+
+L = Lnjpit()
+L.show() 
+
+ln=L.branch.append('computer') 
+print(ln) 
+
+
+		# vowel & consonant count in any string 
+
+s = 'jai maa durga'
+count = ''
+cont = 0 
+const = ''
+conts = 0 
+v = ['a','e','i','o','u'] 
+for i in s:
+	if i in v:
+		count = count + i 
+		cont = cont + 1
+	else:
+		if i not in v:
+			const = const + i 
+			conts = conts + 1 
+print('no. of total consonant : - ' , conts)
+print('consonant : - ', const)	
+print('vowel : - ' , count)
+print('no. of vowel  : - ',  cont)
+
+O/P: - 
+
+no. of total consonant : -  7
+consonant : -  j m drg
+vowel : -  aiaaua     
+no. of vowel  : -  6  
+
+
+		# dictionary example .
+
+# d = {'name':'mukesh','city':'bhagalpur'}
+# e = list(d.keys())[list(d.values()).index('bhagalpur')]
+# print(e)
+# print(d.items())
+# for key, name in d.items():
+#     print(key)
+
+# d = {'name':'mukesh','city':'bhagalpur'}
+# e = {i for i in d if d[i]=='city'} 
+# print('value of keys from keys' , e) 
+
+
+# function to return key for any value
+# def get_key(val):
+# 	for key, value in my_dict.items():
+# 		if val == value:
+# 			return key
+
+# 	return "key doesn't exist"
+
+
+# # Driver Code
+# my_dict = {"Java": 100, "Python": 112, "C": 11}
+
+# print(get_key(100))
+# print(get_key('Java'))
+
+
+# s = '\n'
+# print(s.split(),s.splitlines()) 
+
+		# dictionary get key from values. 
+
+d = {'name':'mukesh','city':'bhagalpur','branch':'cse','lan':'hindi'}
+# print('origiranl dictionary :', d)
+val = list(d.values())
+key = list(d.keys())
+for i in val:
+    if i == val[2]:
+        # print(i)
+        print('value of 3rd key :', key[2])
+
+
+
+
+s = input('entre any string  ')
+l = []
+for i in s:
+    if i not in l:
+        l.append(i) 
+output = ''.join(l)
+print(output)
+
+
+
+#  		sort the number 
+
+l = [23,2,45,98,6,43,987,34]
+# sort assending orde 
+
+for i in range(len(l)):
+    for j in range(i+1,len(l)):
+        if l[i]<l[j]:
+            l[i],l[j] = l[j],l[i]   
+
+print(l)
